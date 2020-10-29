@@ -1,5 +1,5 @@
 Flow report for multiplicador
-Thu Oct 29 08:50:07 2020
+Thu Oct 29 20:21:23 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Oct 29 08:50:07 2020           ;
+; Flow Status                        ; Successful - Thu Oct 29 20:21:23 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; multiplicador                                   ;
-; Top-level Entity Name              ; bc                                              ;
+; Top-level Entity Name              ; multiplicador                                   ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5F256C6                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 6                                               ;
-;     Total combinational functions  ; 5                                               ;
-;     Dedicated logic registers      ; 6                                               ;
-; Total registers                    ; 6                                               ;
-; Total pins                         ; 10                                              ;
+; Total logic elements               ; 29                                              ;
+;     Total combinational functions  ; 24                                              ;
+;     Dedicated logic registers      ; 18                                              ;
+; Total registers                    ; 18                                              ;
+; Total pins                         ; 16                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/29/2020 08:50:05 ;
+; Start date & time ; 10/29/2020 20:21:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; multiplicador       ;
 +-------------------+---------------------+
@@ -75,16 +75,15 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 141812761671015.160397220503124 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 141812761671015.160401368107808 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; bc          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; bc          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; bc          ; Top            ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top            ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; bc                              ; multiplicador ; --          ; --             ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 
 
@@ -93,8 +92,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 4634 MB             ; 00:00:03                           ;
-; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 4634 MB             ; 00:00:01                           ;
+; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

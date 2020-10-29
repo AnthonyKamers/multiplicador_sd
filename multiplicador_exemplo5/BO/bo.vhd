@@ -5,10 +5,11 @@ USE ieee.std_logic_unsigned.all;
 ENTITY bo IS
 GENERIC (N: INTEGER := 4);
 PORT (clk : IN STD_LOGIC;
-      ini, CA, CP, CB, CMULT, MP, MA: IN STD_LOGIC;
+      CA, CP, CB, CMULT, MP, MA: IN STD_LOGIC;
       entA, entB : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
       Az, Bz : OUT STD_LOGIC;
 		regMult: OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0)
+		);
 END bo;
 
 ARCHITECTURE estrutura OF bo IS
@@ -51,14 +52,15 @@ ARCHITECTURE estrutura OF bo IS
 	SIGNAL saidaSomador, zeroTudo, saidaSubtrator: STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 
 BEGIN
-	zeroTudo <= (others => '0');
-	fixedValue <= (0 => '1', others => '0');
+	zeroTudo <= "0000";
+	fixedValue <= "0001";
 	
 	------------------------------------------------------------------------------
 	
 	muxP: mux2para1 PORT MAP (saidaSomador, zeroTudo, MP, saidaMuxP);
-	regP: registrador_r PORT MAP (clk, ini, CP, saidaMuxP, saidaRegP);
-	regMult: registrador PORT MAP (clk, CMULT, saidaRegP, regMult);
+	-- regP: registrador_r PORT MAP (clk, ini, CP, saidaMuxP, saidaRegP);
+	regP: registrador PORT MAP (clk, CP, saidaMuxP, saidaRegP);
+	regMultPortMap: registrador PORT MAP (clk, CMULT, saidaRegP, regMult);
 	
 	regB: registrador PORT MAP (clk, CB, entB, saidaRegB);
 	geraBz: igualzero PORT MAP (saidaRegB, Bz);
@@ -69,7 +71,7 @@ BEGIN
 	muxA: mux2para1 PORT MAP (saidaSubtrator, entA, MA, saidaMuxA);
 	regA: registrador PORT MAP (clk, CA, saidaMuxA, saidaRegA);
 	geraAz: igualzero PORT MAP (saidaRegA, Az);
-	subtratorA1 PORT MAP (saidaRegA, fixedValue, '1', saidaSubtrator);
+	subtratorA1: somadorsubtrator PORT MAP (saidaRegA, "0001", '1', saidaSubtrator);
 	
 	------------------------------------------------------------------------------
 

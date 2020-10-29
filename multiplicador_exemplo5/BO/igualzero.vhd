@@ -9,6 +9,11 @@ igual : OUT STD_LOGIC);
 END igualzero;
 
 ARCHITECTURE estrutura OF igualzero IS
+
+	SIGNAL tudoZero: std_logic_vector(N-1 DOWNTO 0);
+
 BEGIN
-	igual <= '1' WHEN a = (others => '0') ELSE '0';
+	tudoZero <= (others => '0');
+
+	igual <= '1' WHEN a = tudoZero ELSE '0';
 END estrutura;

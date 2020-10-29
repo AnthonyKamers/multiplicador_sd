@@ -3,12 +3,11 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_unsigned.all;
 
 ENTITY bo IS
-GENERIC (N: INTEGER := 4);
 PORT (clk : IN STD_LOGIC;
       ini, CP, CA, dec : IN STD_LOGIC;
-      entA, entB : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+      entA, entB : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       Az, Bz : OUT STD_LOGIC;
-      saida : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
+      saida, conteudoA, conteudoB : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END bo;
 
 -- Sinais de comando
@@ -17,57 +16,55 @@ END bo;
 -- dec = op = m1 = m2  => dec=1 somente em S4 (estado no qual ocorre A <= A - 1 )
 -- CP=1 somente em S3 (estado no qual ocorre P <= P + B )
 
+-- OBS: as saidas conteudoA e conteudoB so servem para inspecionar o conteudos de regA e regB
+-- Assim que o codigo VHDL estiver depurado, elas deveriam ser retiradas para nao utilizar recursos
+
 ARCHITECTURE estrutura OF bo IS
 	
 	COMPONENT registrador_r IS
-	GENERIC (N: INTEGER := 4);
-	PORT (clk, reset, carga : IN STD_LOGIC;
-		  d : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-		  q : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
+	PORT (clk,  reset, carga : IN STD_LOGIC;
+		  d : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  q : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 	END COMPONENT;
 	
 	COMPONENT registrador IS
-	GENERIC (N: INTEGER := 4);
 	PORT (clk, carga : IN STD_LOGIC;
-		  d : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-		  q : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
+		  d : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  q : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 	END COMPONENT;
 	
 	COMPONENT mux2para1 IS
-	GENERIC (N: INTEGER := 4);
-	PORT ( a, b : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-				sel: IN STD_LOGIC;
-				y : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
+	PORT ( a, b : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+           sel: IN STD_LOGIC;
+           y : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 	END COMPONENT;
 	
 	COMPONENT somadorsubtrator IS
-	GENERIC (N: INTEGER := 4);
-	PORT (a, b : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-			op: IN STD_LOGIC;
-			s : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
+	PORT (a, b : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  op: IN STD_LOGIC;
+		  s : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 	END COMPONENT;
 	
-   COMPONENT igualzero IS
-	GENERIC (N: INTEGER := 4);
-	PORT (a : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-	igual : OUT STD_LOGIC);
+    COMPONENT igualazero IS
+	PORT (a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+          igual : OUT STD_LOGIC);
 	END COMPONENT;
 		
-	SIGNAL saimux1, saimux2, saimux3, sairegP, sairegA, sairegB, saisomasub, fixedValue: STD_LOGIC_VECTOR (N-1 DOWNTO 0);
+	SIGNAL saimux1, saimux2, saimux3, sairegP, sairegA, sairegB, saisomasub: STD_LOGIC_VECTOR (3 DOWNTO 0);
 
 BEGIN
-	fixedValue <= (0 => '1', others => '0');
-
 	mux1: mux2para1 PORT MAP ( saisomasub, entA, ini, saimux1 );
 	regP: registrador_r PORT MAP (clk, ini, CP, saisomasub, sairegP);
 	regA: registrador PORT MAP (clk, CA, saimux1, sairegA );
 	regB: registrador PORT MAP (clk, ini, entB, sairegB );
 	mux2: mux2para1 PORT MAP ( sairegP, sairegA, dec, saimux2 );	
-	mux3: mux2para1 PORT MAP ( sairegB, fixedValue, dec, saimux3 );
+	mux3: mux2para1 PORT MAP ( sairegB, "0001", dec, saimux3 );
 	somasub: somadorsubtrator PORT MAP (saimux2, saimux3, dec, saisomasub);
-	geraAz: igualzero PORT MAP ( sairegA, Az );
-	geraBz: igualzero PORT MAP ( sairegB, Bz );
+	geraAz: igualazero PORT MAP ( sairegA, Az );
+	geraBz: igualazero PORT MAP ( sairegB, Bz );	
 	
 	saida <= sairegP;
+	conteudoA <= sairegA;
+	conteudoB <= sairegB;
 
 END estrutura;

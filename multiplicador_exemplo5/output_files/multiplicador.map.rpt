@@ -1,5 +1,5 @@
 Analysis & Synthesis report for multiplicador
-Thu Oct 29 09:08:41 2020
+Thu Oct 29 19:56:18 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,29 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Parameter Settings for User Entity Instance: Top-level Entity: |multiplicador
-  6. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |multiplicador|bc:BCconnection|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |multiplicador
+ 12. Parameter Settings for User Entity Instance: bo:BOconnection
+ 13. Parameter Settings for User Entity Instance: bo:BOconnection|mux2para1:muxP
+ 14. Parameter Settings for User Entity Instance: bo:BOconnection|registrador:regP
+ 15. Parameter Settings for User Entity Instance: bo:BOconnection|registrador:regMultPortMap
+ 16. Parameter Settings for User Entity Instance: bo:BOconnection|registrador:regB
+ 17. Parameter Settings for User Entity Instance: bo:BOconnection|igualzero:geraBz
+ 18. Parameter Settings for User Entity Instance: bo:BOconnection|somadorsubtrator:somadorPB
+ 19. Parameter Settings for User Entity Instance: bo:BOconnection|mux2para1:muxA
+ 20. Parameter Settings for User Entity Instance: bo:BOconnection|registrador:regA
+ 21. Parameter Settings for User Entity Instance: bo:BOconnection|igualzero:geraAz
+ 22. Parameter Settings for User Entity Instance: bo:BOconnection|somadorsubtrator:subtratorA1
+ 23. Port Connectivity Checks: "bo:BOconnection|somadorsubtrator:subtratorA1"
+ 24. Port Connectivity Checks: "bo:BOconnection|somadorsubtrator:somadorPB"
+ 25. Port Connectivity Checks: "bo:BOconnection|mux2para1:muxP"
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +58,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Oct 29 09:08:41 2020               ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 29 19:56:18 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; multiplicador                                   ;
 ; Top-level Entity Name              ; multiplicador                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 28                                              ;
+;     Total combinational functions  ; 20                                              ;
+;     Dedicated logic registers      ; 25                                              ;
+; Total registers                    ; 25                                              ;
+; Total pins                         ; 16                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -150,6 +171,111 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                        ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; BO/igualzero.vhd                 ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/igualzero.vhd        ;         ;
+; BO/mux2para1.vhd                 ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/mux2para1.vhd        ;         ;
+; BO/registrador.vhd               ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/registrador.vhd      ;         ;
+; BO/somadorsubtrator.vhd          ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somadorsubtrator.vhd ;         ;
+; BO/bo.vhd                        ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/bo.vhd               ;         ;
+; BC/bc.vhd                        ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BC/bc.vhd               ;         ;
+; multiplicador.vhd                ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/multiplicador.vhd       ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 28    ;
+;                                             ;       ;
+; Total combinational functions               ; 20    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 8     ;
+;     -- 3 input functions                    ; 9     ;
+;     -- <=2 input functions                  ; 3     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 17    ;
+;     -- arithmetic mode                      ; 3     ;
+;                                             ;       ;
+; Total registers                             ; 25    ;
+;     -- Dedicated logic registers            ; 25    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 16    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 25    ;
+; Total fan-out                               ; 149   ;
+; Average fan-out                             ; 2.44  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
+; |multiplicador                     ; 20 (0)            ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |multiplicador                                            ; work         ;
+;    |bc:BCconnection|               ; 9 (9)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bc:BCconnection                            ; work         ;
+;    |bo:BOconnection|               ; 11 (0)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection                            ; work         ;
+;       |igualzero:geraAz|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|igualzero:geraAz           ; work         ;
+;       |igualzero:geraBz|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|igualzero:geraBz           ; work         ;
+;       |mux2para1:muxA|             ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|mux2para1:muxA             ; work         ;
+;       |registrador:regA|           ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|registrador:regA           ; work         ;
+;       |registrador:regB|           ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|registrador:regB           ; work         ;
+;       |registrador:regMultPortMap| ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|registrador:regMultPortMap ; work         ;
+;       |registrador:regP|           ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|registrador:regP           ; work         ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------+
+; State Machine - |multiplicador|bc:BCconnection|state            ;
++----------+----------+----------+----------+----------+----------+
+; Name     ; state.S4 ; state.S3 ; state.S2 ; state.S1 ; state.S0 ;
++----------+----------+----------+----------+----------+----------+
+; state.S0 ; 0        ; 0        ; 0        ; 0        ; 0        ;
+; state.S1 ; 0        ; 0        ; 0        ; 1        ; 1        ;
+; state.S2 ; 0        ; 0        ; 1        ; 0        ; 1        ;
+; state.S3 ; 0        ; 1        ; 0        ; 0        ; 1        ;
+; state.S4 ; 1        ; 0        ; 0        ; 0        ; 1        ;
++----------+----------+----------+----------+----------+----------+
+
+
++------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                     ;
++---------------------------------------+--------------------------------+
+; Register name                         ; Reason for Removal             ;
++---------------------------------------+--------------------------------+
+; bc:BCconnection|MA                    ; Merged with bc:BCconnection|CB ;
+; bc:BCconnection|MP                    ; Merged with bc:BCconnection|CB ;
+; bc:BCconnection|CP                    ; Merged with bc:BCconnection|CA ;
+; Total Number of Removed Registers = 3 ;                                ;
++---------------------------------------+--------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 25    ;
+; Number of registers using Synchronous Clear  ; 4     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
 +-------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |multiplicador ;
 +----------------+-------+------------------------------------------------------+
@@ -160,13 +286,161 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BOconnection ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; n              ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BOconnection|mux2para1:muxP ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; n              ; 4     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BOconnection|registrador:regP ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BOconnection|registrador:regMultPortMap ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BOconnection|registrador:regB ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BOconnection|igualzero:geraBz ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BOconnection|somadorsubtrator:somadorPB ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BOconnection|mux2para1:muxA ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; n              ; 4     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BOconnection|registrador:regA ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BOconnection|igualzero:geraAz ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bo:BOconnection|somadorsubtrator:subtratorA1 ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "bo:BOconnection|somadorsubtrator:subtratorA1" ;
++---------+-------+----------+---------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                     ;
++---------+-------+----------+---------------------------------------------+
+; b[3..1] ; Input ; Info     ; Stuck at GND                                ;
+; b[0]    ; Input ; Info     ; Stuck at VCC                                ;
+; op      ; Input ; Info     ; Stuck at VCC                                ;
++---------+-------+----------+---------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "bo:BOconnection|somadorsubtrator:somadorPB" ;
++------+-------+----------+----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                      ;
++------+-------+----------+----------------------------------------------+
+; op   ; Input ; Info     ; Stuck at GND                                 ;
++------+-------+----------+----------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "bo:BOconnection|mux2para1:muxP" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Oct 29 09:08:38 2020
+    Info: Processing started: Thu Oct 29 19:56:16 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off multiplicador -c multiplicador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file bo/igualzero.vhd
@@ -194,12 +468,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file multipl
     Info (12022): Found design unit 1: multiplicador-estrutura
     Info (12023): Found entity 1: multiplicador
 Info (12127): Elaborating entity "multiplicador" for the top level hierarchy
-Warning (12158): Entity "multiplicador" contains only dangling pins
-Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
-    Error: Peak virtual memory: 4622 megabytes
-    Error: Processing ended: Thu Oct 29 09:08:41 2020
-    Error: Elapsed time: 00:00:03
-    Error: Total CPU time (on all processors): 00:00:03
+Info (12128): Elaborating entity "bc" for hierarchy "bc:BCconnection"
+Info (12128): Elaborating entity "bo" for hierarchy "bo:BOconnection"
+Warning (10036): Verilog HDL or VHDL warning at bo.vhd(51): object "fixedValue" assigned a value but never read
+Info (12128): Elaborating entity "mux2para1" for hierarchy "bo:BOconnection|mux2para1:muxP"
+Info (12128): Elaborating entity "registrador" for hierarchy "bo:BOconnection|registrador:regP"
+Info (12128): Elaborating entity "igualzero" for hierarchy "bo:BOconnection|igualzero:geraBz"
+Info (12128): Elaborating entity "somadorsubtrator" for hierarchy "bo:BOconnection|somadorsubtrator:somadorPB"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 28 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4634 megabytes
+    Info: Processing ended: Thu Oct 29 19:56:18 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

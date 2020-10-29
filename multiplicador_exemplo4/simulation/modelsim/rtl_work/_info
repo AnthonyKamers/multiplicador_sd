@@ -2,26 +2,26 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\antho\Desktop\Anthony\UFSC\2020.1\SD\Prática\Aula 10\simulation\modelsim
+Z0 dC:\Users\antho\Desktop\Anthony\UFSC\2020.1\SD\Prática\Trabalho Final\multiplicador_exemplo4\simulation\modelsim
 Ebc
-Z1 w1603366871
+Z1 w1604013558
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z4 dC:\Users\antho\Desktop\Anthony\UFSC\2020.1\SD\Prática\Aula 10\simulation\modelsim
-Z5 8C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Aula 10/BC/bc.vhd
-Z6 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Aula 10/BC/bc.vhd
+Z4 dC:\Users\antho\Desktop\Anthony\UFSC\2020.1\SD\Prática\Trabalho Final\multiplicador_exemplo4\simulation\modelsim
+Z5 8C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BC/bc.vhd
+Z6 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BC/bc.vhd
 l0
 L4
 VR@@E5gSJVn[i0>H[=JWll0
-!s100 fQGT>oOkb94QN1KSW<e:O0
 Z7 OV;C;10.1d;51
 31
-!i10b 1
-Z8 !s108 1603372164.591000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Aula 10/BC/bc.vhd|
-Z10 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Aula 10/BC/bc.vhd|
+Z8 !s108 1604013752.646000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BC/bc.vhd|
+Z10 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BC/bc.vhd|
 Z11 o-93 -work work -O0
 Z12 tExplicit 1
+!s100 fQGT>oOkb94QN1KSW<e:O0
+!i10b 1
 Aestrutura
 R2
 R3
@@ -29,12 +29,281 @@ DEx4 work 2 bc 0 22 R@@E5gSJVn[i0>H[=JWll0
 l21
 L18
 V0EeT1c443Cz=kAjGTjOo13
-!s100 _bDolNmGC38Yb`ffHTEJ03
 R7
 31
-!i10b 1
 R8
 R9
 R10
 R11
 R12
+!s100 _bDolNmGC38Yb`ffHTEJ03
+!i10b 1
+Ebo
+Z13 w1604013574
+Z14 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R2
+R3
+R4
+Z16 8C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/bo.vhd
+Z17 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/bo.vhd
+l0
+L5
+VBK?C7ndY<`QbdIk>f6kSj2
+R7
+31
+Z18 !s108 1604013753.536000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/bo.vhd|
+Z20 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/bo.vhd|
+R11
+R12
+!s100 QfbSmG=U96YK]=BW4=XFm2
+!i10b 1
+Aestrutura
+R14
+R15
+R2
+R3
+DEx4 work 2 bo 0 22 BK?C7ndY<`QbdIk>f6kSj2
+l55
+L22
+Vh0NE1f2zngOXX8HAbFL_82
+R7
+31
+R18
+R19
+R20
+R11
+R12
+!s100 [0j:kl=E?o;If8AZGFK^g3
+!i10b 1
+Eigualazero
+Z21 w1604013608
+R14
+R15
+R2
+R3
+R4
+Z22 8C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/igualazero.vhd
+Z23 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/igualazero.vhd
+l0
+L5
+VNBoGfmMBo_D5A^UMKX@?k0
+!s100 KfNoVkif4VbL3XJkO8lZ?2
+R7
+31
+!i10b 1
+Z24 !s108 1604013753.996000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/igualazero.vhd|
+Z26 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/igualazero.vhd|
+R11
+R12
+Aestrutura
+R14
+R15
+R2
+R3
+DEx4 work 10 igualazero 0 22 NBoGfmMBo_D5A^UMKX@?k0
+l11
+L10
+V9eL@Fld@EXP<oT>QmjFT;1
+!s100 fJS=6mMjLanN_0M:1bWB]1
+R7
+31
+!i10b 1
+R24
+R25
+R26
+R11
+R12
+Emultiplicador
+Z27 w1603368449
+R14
+R15
+R2
+R3
+R4
+Z28 8C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/multiplicador.vhd
+Z29 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/multiplicador.vhd
+l0
+L5
+V@OZ9a_2Bca0Vb6[j^STO`1
+R7
+31
+Z30 !s108 1604013753.751000
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/multiplicador.vhd|
+Z32 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/multiplicador.vhd|
+R11
+R12
+!s100 4O6=bKeUa0PPbh_NeLQ?51
+!i10b 1
+Abhv
+R14
+R15
+R2
+R3
+DEx4 work 13 multiplicador 0 22 @OZ9a_2Bca0Vb6[j^STO`1
+l32
+L12
+VjE6o@n8HMXgNYJ@i0R2HN2
+R7
+31
+R30
+R31
+R32
+R11
+R12
+!s100 fW^Z;C@Wnb3PL3h6fM6@G0
+!i10b 1
+Emux2para1
+Z33 w1604013626
+R2
+R3
+R4
+Z34 8C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/mux2para1.vhd
+Z35 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/mux2para1.vhd
+l0
+L4
+VT>Uoej=7LaLB[cj@P@6jl2
+R7
+31
+Z36 !s108 1604013752.766000
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/mux2para1.vhd|
+Z38 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/mux2para1.vhd|
+R11
+R12
+!s100 GJF2MJoU23L<AXWiL_zkM2
+!i10b 1
+Acomportamento
+R2
+R3
+DEx4 work 9 mux2para1 0 22 T>Uoej=7LaLB[cj@P@6jl2
+l11
+L10
+VhhOVOlgEYHo;GLlaBzZ[h2
+R7
+31
+R36
+R37
+R38
+R11
+R12
+!s100 LmbI1PM`XDj0PSkgQXAS00
+!i10b 1
+Eregistrador
+Z39 w1604013635
+R14
+R15
+R2
+R3
+R4
+Z40 8C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/registrador.vhd
+Z41 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/registrador.vhd
+l0
+L5
+V>>M4OeS=CL]iVhHKQW42M0
+R7
+31
+Z42 !s108 1604013752.986000
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/registrador.vhd|
+Z44 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/registrador.vhd|
+R11
+R12
+!s100 z<8o?ck1;D5cikWSSR=@G3
+!i10b 1
+Aestrutura
+R14
+R15
+R2
+R3
+DEx4 work 11 registrador 0 22 >>M4OeS=CL]iVhHKQW42M0
+l12
+L11
+VaMX4FdYM^XZ:Hm2bX_G4e1
+R7
+31
+R42
+R43
+R44
+R11
+R12
+!s100 4EbXgbcj0odiGSm_XOSdg3
+!i10b 1
+Eregistrador_r
+Z45 w1604013642
+R14
+R15
+R2
+R3
+R4
+Z46 8C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/registrador_r.vhd
+Z47 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/registrador_r.vhd
+l0
+L5
+VUh1<NMK:Il2fR@1EC^WL_0
+R7
+31
+Z48 !s108 1604013753.206000
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/registrador_r.vhd|
+Z50 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/registrador_r.vhd|
+R11
+R12
+!s100 fJW5`4`mR^X>P7?9;6d6d2
+!i10b 1
+Aestrutura
+R14
+R15
+R2
+R3
+DEx4 work 13 registrador_r 0 22 Uh1<NMK:Il2fR@1EC^WL_0
+l12
+L11
+VnaIcR@U3?^0<?XA8M9P_F3
+R7
+31
+R48
+R49
+R50
+R11
+R12
+!s100 ioAP>2EiST7lL9KfE7Cj`2
+!i10b 1
+Esomadorsubtrator
+Z51 w1604013650
+R14
+R15
+R2
+R3
+R4
+Z52 8C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/somadorsubtrator.vhd
+Z53 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/somadorsubtrator.vhd
+l0
+L5
+V2M9SZDEodkeeV;n:VBAGl0
+R7
+31
+Z54 !s108 1604013753.406000
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/somadorsubtrator.vhd|
+Z56 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/BO/somadorsubtrator.vhd|
+R11
+R12
+!s100 aMggnlDmViEO:3OD9EdIF3
+!i10b 1
+Aestrutura
+R14
+R15
+R2
+R3
+DEx4 work 16 somadorsubtrator 0 22 2M9SZDEodkeeV;n:VBAGl0
+l12
+L11
+V833R`WUi_l1dlb_aCC89P1
+R7
+31
+R54
+R55
+R56
+R11
+R12
+!s100 WA=KjK590Ez=;GjiS<;Vo0
+!i10b 1

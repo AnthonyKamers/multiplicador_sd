@@ -5,7 +5,7 @@ ENTITY bc IS
 PORT (Reset, clk, inicio : IN STD_LOGIC;
       aZ, bZ: IN STD_LOGIC;
       pronto : OUT STD_LOGIC;
-      ini, CA, CP, CB, CMULT, MP, MA: OUT STD_LOGIC );
+      CA, CP, CB, CMULT, MP, MA: OUT STD_LOGIC );
 END bc;
 
 
@@ -26,8 +26,7 @@ BEGIN
 					ELSE 
 						state <= S0;
 					END IF;
-					pronto <= '1';
-					ini <= '0';
+					pronto <= '0';
 					CA <= '0';
 					CP <= '0';
 					CB <= '0';
@@ -37,7 +36,6 @@ BEGIN
 				
 				WHEN S1 =>
 					pronto <= '0';
-					ini <= '1';
 					CA <= '1';
 					CP <= '1';
 					CB <= '1';
@@ -48,14 +46,10 @@ BEGIN
 					state <= S2;
 					
 				WHEN S2 =>
-					ini <= '0';
-
-					IF (not aZ and not bZ) THEN
+					IF ((not aZ and not bZ) = '1') THEN
 						state <= S3;
-					ELSIF (aZ or bZ) THEN
+					ELSIF ((aZ or bZ) = '1') THEN
 						state <= S4;
-					ELSE
-						state <= S2;
 					END IF;
 					
 				WHEN S3 =>
@@ -69,7 +63,7 @@ BEGIN
 					state <= S2;
 					
 				WHEN S4 =>
-					pronto <= '0';
+					pronto <= '1';
 					CA <= '0';
 					CP <= '0';
 					CB <= '0';
