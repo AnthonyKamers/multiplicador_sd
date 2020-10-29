@@ -1,0 +1,13 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+ENTITY bc IS
+GENERIC (N: INTEGER := 4);
+PORT ();
+END bc;
+
+ARCHITECTURE estrutura OF bc IS
+BEGIN
+
+END estrutura;
