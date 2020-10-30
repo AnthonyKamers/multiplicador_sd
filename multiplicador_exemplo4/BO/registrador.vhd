@@ -10,7 +10,7 @@ END registrador;
 
 ARCHITECTURE estrutura OF registrador IS
 BEGIN
-	PROCESS(clk)
+	PROCESS(clk, carga)
 	BEGIN
 		IF (clk'EVENT AND clk = '1' AND carga = '1') THEN
 			q <= d;

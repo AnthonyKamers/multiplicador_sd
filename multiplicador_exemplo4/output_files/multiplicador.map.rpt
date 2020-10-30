@@ -1,5 +1,5 @@
 Analysis & Synthesis report for multiplicador
-Thu Oct 29 20:21:23 2020
+Fri Oct 30 18:33:28 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,9 +16,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. State Machine - |multiplicador|bc:BCportMap|state
   9. General Register Statistics
  10. Port Connectivity Checks: "bo:BOportMap|mux2para1:mux3"
- 11. Port Connectivity Checks: "bo:BOportMap"
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +43,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 29 20:21:23 2020           ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 30 18:33:28 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; multiplicador                                   ;
 ; Top-level Entity Name              ; multiplicador                                   ;
@@ -263,16 +262,6 @@ Encoding Type:  One-Hot
 +---------+-------+----------+----------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bo:BOportMap"                                                                                                 ;
-+-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                  ;
-+-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; conteudoa ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; conteudob ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -288,7 +277,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Oct 29 20:21:21 2020
+    Info: Processing started: Fri Oct 30 18:33:26 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off multiplicador -c multiplicador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file bc/bc.vhd
@@ -315,27 +304,27 @@ Info (12021): Found 2 design units, including 1 entities, in source file multipl
 Info (12021): Found 2 design units, including 1 entities, in source file bo/igualazero.vhd
     Info (12022): Found design unit 1: igualazero-estrutura
     Info (12023): Found entity 1: igualazero
+Info (12021): Found 2 design units, including 1 entities, in source file multiplicador_tb.vhd
+    Info (12022): Found design unit 1: multiplicador_tb-tb
+    Info (12023): Found entity 1: multiplicador_tb
 Info (12127): Elaborating entity "multiplicador" for the top level hierarchy
 Info (12128): Elaborating entity "bo" for hierarchy "bo:BOportMap"
 Info (12128): Elaborating entity "mux2para1" for hierarchy "bo:BOportMap|mux2para1:mux1"
 Info (12128): Elaborating entity "registrador_r" for hierarchy "bo:BOportMap|registrador_r:regP"
-Warning (10492): VHDL Process Statement warning at registrador_r.vhd(17): signal "carga" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "registrador" for hierarchy "bo:BOportMap|registrador:regA"
-Warning (10492): VHDL Process Statement warning at registrador.vhd(15): signal "carga" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "somadorsubtrator" for hierarchy "bo:BOportMap|somadorsubtrator:somasub"
 Info (12128): Elaborating entity "igualazero" for hierarchy "bo:BOportMap|igualazero:geraAz"
 Info (12128): Elaborating entity "bc" for hierarchy "bc:BCportMap"
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 34 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4634 megabytes
-    Info: Processing ended: Thu Oct 29 20:21:23 2020
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4622 megabytes
+    Info: Processing ended: Fri Oct 30 18:33:28 2020
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

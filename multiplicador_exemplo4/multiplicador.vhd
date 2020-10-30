@@ -11,6 +11,7 @@ END multiplicador;
 
 ARCHITECTURE bhv OF multiplicador IS
 
+signal saidaFinal: std_logic_vector(3 downto 0);
 signal ini, CP, CA, dec: std_logic;
 signal Az, Bz: std_logic;
 
@@ -31,7 +32,9 @@ END component;
 
 BEGIN
 
-	BOportMap: bo port map(clk, ini, CP, CA, dec, entA, entB, Az, Bz, saida);
+	BOportMap: bo port map(clk, ini, CP, CA, dec, entA, entB, Az, Bz, saidaFinal);
 	BCportMap: bc port map(Reset, clk, inicio, Az, Bz, pronto, ini, CA, dec, CP);
+	
+	saida <= saidaFinal;
 	
 END bhv;

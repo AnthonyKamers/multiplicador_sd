@@ -1,0 +1,50 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity multiplicador_tb is
+end multiplicador_tb;
+
+architecture tb of multiplicador_tb is
+	signal Reset, clk, inicio, pronto: std_logic;
+	signal entA, entB: std_logic_vector(3 downto 0);
+	signal saida: std_logic_vector(6 downto 0);
+	
+	-- top level 
+	component multiplicador IS
+	PORT (Reset, clk, inicio : IN STD_LOGIC;
+			entA, entB: IN std_logic_vector(3 downto 0);
+			pronto : OUT STD_LOGIC;
+			saida: OUT std_logic_vector(3 downto 0));
+	END component;
+		  
+begin
+    -- instanciando a nossa top level e conectando com os sinais do TB
+    -- UUT : ULA generic map(N =>N) port map (A => sA, B => sB, opcode => sopcode, S => sS);
+	 MultMap: multiplicador port map (Reset => Reset, clk => clk, inicio => inicio, entA => entA, entB => entB, pronto => pronto, saida => saida);
+
+	 
+	 --force /clk 0 0ns, 1 10ns -r 20ns
+	 --force /Reset 1 0ns, 0 10ns
+	 --force /inicio 1 20ns, 0 40ns
+	 --force /entA 0011 20ns
+	 --force /entB 0100 20ns
+
+	 Reset <= '1', 0 10ns;
+	 inicio <= '0', 1 20ns, 0 40ns;
+	 entA <= "0011";
+	 entB <= "0100";
+	
+	 -- processo gerador de clock
+	 tb1 : process
+	  constant periodo: time := 20 ns; -- periodo do clock
+	  begin
+			clk <= '1';
+			wait for periodo/2; -- 50% do periodo pra cada nivel
+			clk <= '0';
+			wait for periodo/2;
+	  end process;
+	 
+end tb ;

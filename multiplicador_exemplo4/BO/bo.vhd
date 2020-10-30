@@ -7,7 +7,7 @@ PORT (clk : IN STD_LOGIC;
       ini, CP, CA, dec : IN STD_LOGIC;
       entA, entB : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       Az, Bz : OUT STD_LOGIC;
-      saida, conteudoA, conteudoB : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
+      saida: OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END bo;
 
 -- Sinais de comando
@@ -57,14 +57,14 @@ BEGIN
 	regP: registrador_r PORT MAP (clk, ini, CP, saisomasub, sairegP);
 	regA: registrador PORT MAP (clk, CA, saimux1, sairegA );
 	regB: registrador PORT MAP (clk, ini, entB, sairegB );
-	mux2: mux2para1 PORT MAP ( sairegP, sairegA, dec, saimux2 );	
+	mux2: mux2para1 PORT MAP ( sairegP, sairegA, dec, saimux2 );
 	mux3: mux2para1 PORT MAP ( sairegB, "0001", dec, saimux3 );
 	somasub: somadorsubtrator PORT MAP (saimux2, saimux3, dec, saisomasub);
 	geraAz: igualazero PORT MAP ( sairegA, Az );
-	geraBz: igualazero PORT MAP ( sairegB, Bz );	
+	geraBz: igualazero PORT MAP ( sairegB, Bz );
 	
 	saida <= sairegP;
-	conteudoA <= sairegA;
-	conteudoB <= sairegB;
+	--conteudoA <= sairegA;
+	--conteudoB <= sairegB;
 
 END estrutura;

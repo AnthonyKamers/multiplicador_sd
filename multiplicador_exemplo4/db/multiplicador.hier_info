@@ -44,14 +44,6 @@ saida[0] <= registrador_r:regP.q[0]
 saida[1] <= registrador_r:regP.q[1]
 saida[2] <= registrador_r:regP.q[2]
 saida[3] <= registrador_r:regP.q[3]
-conteudoA[0] <= registrador:regA.q[0]
-conteudoA[1] <= registrador:regA.q[1]
-conteudoA[2] <= registrador:regA.q[2]
-conteudoA[3] <= registrador:regA.q[3]
-conteudoB[0] <= registrador:regB.q[0]
-conteudoB[1] <= registrador:regB.q[1]
-conteudoB[2] <= registrador:regB.q[2]
-conteudoB[3] <= registrador:regB.q[3]
 
 
 |multiplicador|bo:BOportMap|mux2para1:mux1
