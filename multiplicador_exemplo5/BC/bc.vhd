@@ -54,6 +54,14 @@ BEGIN
 						state <= S4;
 					END IF;
 					
+					pronto <= '0';
+					CA <= '0';
+					CP <= '0';
+					CB <= '0';
+					CMULT <= '0';
+					MP <= '0';
+					MA <= '0';
+					
 				WHEN S3 =>
 					CA <= '1';
 					CP <= '1';
