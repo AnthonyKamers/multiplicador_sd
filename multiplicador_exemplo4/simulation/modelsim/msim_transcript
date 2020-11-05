@@ -200,10 +200,4 @@ run 400ns
 #    Time: 20 ns  Iteration: 5  Instance: /multiplicador_tb/M1/BOportMap/somasub
 add wave *
 run 400ns
-reset
-# invalid command name "reset"
-restart
-# ** Error: (vsim-3170) Could not find 'C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo4/simulation/modelsim/rtl_work.multiplicador_tb'.
-# 
-run 400ns
-# No Design Loaded!
+# WARNING: No extended dataflow license exists

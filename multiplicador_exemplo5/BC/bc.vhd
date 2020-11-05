@@ -26,7 +26,8 @@ BEGIN
 					ELSE 
 						state <= S0;
 					END IF;
-					pronto <= '0';
+
+					pronto <= '1';
 					CA <= '0';
 					CP <= '0';
 					CB <= '0';
@@ -63,7 +64,7 @@ BEGIN
 					state <= S2;
 					
 				WHEN S4 =>
-					pronto <= '1';
+					pronto <= '0';
 					CA <= '0';
 					CP <= '0';
 					CB <= '0';

@@ -3,24 +3,22 @@ USE ieee.std_logic_1164.all;
 USE ieee.std_logic_unsigned.all;
 
 ENTITY multiplicador IS
-GENERIC (N: INTEGER := 4);
 PORT (
 	inicio, Reset, clk: in std_logic;
-	entA, entB: in std_logic_vector(N-1 downto 0);
+	entA, entB: in std_logic_vector(3 downto 0);
 	pronto: out std_logic;
-	mult: out std_logic_vector(N-1 downto 0)
+	mult: out std_logic_vector(3 downto 0)
 );
 END multiplicador;
 
 ARCHITECTURE estrutura OF multiplicador IS
 
 	COMPONENT bo IS
-	GENERIC (N: INTEGER := 4);
 	PORT (clk : IN STD_LOGIC;
 			CA, CP, CB, CMULT, MP, MA: IN STD_LOGIC;
-			entA, entB : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+			entA, entB : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 			Az, Bz : OUT STD_LOGIC;
-			regMult: OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0)
+			regMult: OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 			);
 	END COMPONENT;
 	
