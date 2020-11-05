@@ -14,10 +14,11 @@ ARCHITECTURE estrutura OF bc IS
 	SIGNAL state: state_type;
 BEGIN
 	-- Logica de proximo estado (e registrador de estado)
-	PROCESS (clk, Reset)
+	PROCESS (clk, Reset, inicio, aZ, bZ, state)
 	BEGIN
-		if(Reset = '1') THEN
-			state <= S0 ;
+		IF(Reset = '1') THEN
+			state <= S0;
+
 		ELSIF (clk'EVENT AND clk = '1') THEN
 			CASE state IS
 				WHEN S0 =>
@@ -27,7 +28,7 @@ BEGIN
 						state <= S0;
 					END IF;
 
-					pronto <= '1';
+					pronto <= '0';
 					CA <= '0';
 					CP <= '0';
 					CB <= '0';
@@ -64,7 +65,7 @@ BEGIN
 					state <= S2;
 					
 				WHEN S4 =>
-					pronto <= '0';
+					pronto <= '1';
 					CA <= '0';
 					CP <= '0';
 					CB <= '0';

@@ -30,10 +30,13 @@ ARCHITECTURE estrutura OF multiplicador IS
 	END COMPONENT;
 	
 	signal CA, CP, CB, CMULT, MP, MA, aZ, bZ: std_logic;
+	signal saidaRegMult: std_logic_vector(3 downto 0);
 
 BEGIN
 
 	BCconnection: bc port map (Reset, clk, inicio, aZ, bZ, pronto, CA, CP, CB, CMULT, MP, MA);
-	BOconnection: bo port map (clk, CA, CP, CB, CMULT, MP, MA, entA, entB, aZ, bZ, mult);
+	BOconnection: bo port map (clk, CA, CP, CB, CMULT, MP, MA, entA, entB, aZ, bZ, saidaRegMult);
+	
+	mult <= saidaRegMult;
 
 END estrutura;

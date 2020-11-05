@@ -43,7 +43,7 @@ ARCHITECTURE estrutura OF bo IS
 	END COMPONENT;
 		
 	SIGNAL saidaMuxP, saidaMuxA, saidaRegA, saidaRegP, saidaRegB, fixedValue: STD_LOGIC_VECTOR (3 DOWNTO 0);
-	SIGNAL saidaSomador, zeroTudo, saidaSubtrator: STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL saidaSomador, zeroTudo, saidaSubtrator, saidaRegMult: STD_LOGIC_VECTOR(3 DOWNTO 0);
 
 BEGIN
 	zeroTudo <= "0000";
@@ -54,7 +54,7 @@ BEGIN
 	muxP: mux2para1 PORT MAP (saidaSomador, zeroTudo, MP, saidaMuxP);
 	-- regP: registrador_r PORT MAP (clk, ini, CP, saidaMuxP, saidaRegP);
 	regP: registrador PORT MAP (clk, CP, saidaMuxP, saidaRegP);
-	regMultPortMap: registrador PORT MAP (clk, CMULT, saidaRegP, regMult);
+	regMultPortMap: registrador PORT MAP (clk, CMULT, saidaRegP, saidaRegMult);
 	
 	regB: registrador PORT MAP (clk, CB, entB, saidaRegB);
 	geraBz: igualzero PORT MAP (saidaRegB, Bz);
@@ -68,5 +68,7 @@ BEGIN
 	subtratorA1: somadorsubtrator PORT MAP (saidaRegA, fixedValue, '1', saidaSubtrator);
 	
 	------------------------------------------------------------------------------
+	
+	regMult <= saidaRegMult;
 
 END estrutura;

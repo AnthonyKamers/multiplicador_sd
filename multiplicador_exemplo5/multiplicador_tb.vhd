@@ -23,10 +23,11 @@ architecture tb of multiplicador_tb is
 	 signal mult: std_logic_vector(3 downto 0);
 begin
     -- conectando os sinais do test bench aos sinais do fsm
-	 M1: multiplicador port map (Reset, clk, inicio, entA, entB, pronto, mult);
+	 M1: multiplicador port map (inicio, Reset, clk, entA, entB, pronto, mult);
 		
-	 Reset <= '1', '0' after 10 ns;
-	 inicio <= '1' after 10 ns, '0' after 30 ns;
+	 -- Reset <= '1', '0' after 20 ns;
+	 Reset <= '0', '1' after 20 ns, '0' after 40 ns;
+	 inicio <= '0', '1' after 40 ns, '0' after 60 ns;
 	 entA <= "0011";
 	 entB <= "0100";
 	 
