@@ -19,14 +19,14 @@ mult[3] <= bo:BOconnection.regMult[3]
 
 
 |multiplicador|bc:BCconnection
-Reset => state~8.DATAIN
-Reset => MA~reg0.ENA
-Reset => pronto~reg0.ENA
-Reset => CA~reg0.ENA
-Reset => CP~reg0.ENA
-Reset => CB~reg0.ENA
-Reset => CMULT~reg0.ENA
-Reset => MP~reg0.ENA
+Reset => MA~reg0.ACLR
+Reset => MP~reg0.ACLR
+Reset => CMULT~reg0.ACLR
+Reset => CB~reg0.ACLR
+Reset => CP~reg0.ACLR
+Reset => CA~reg0.ACLR
+Reset => pronto~reg0.ACLR
+Reset => state~3.DATAIN
 clk => MA~reg0.CLK
 clk => MP~reg0.CLK
 clk => CMULT~reg0.CLK
@@ -34,12 +34,10 @@ clk => CB~reg0.CLK
 clk => CP~reg0.CLK
 clk => CA~reg0.CLK
 clk => pronto~reg0.CLK
-clk => state~6.DATAIN
-inicio => Selector1.IN3
+clk => state~1.DATAIN
+inicio => state.DATAB
 inicio => Selector0.IN2
 aZ => process_0.IN0
-aZ => process_0.IN0
-bZ => process_0.IN1
 bZ => process_0.IN1
 pronto <= pronto~reg0.DB_MAX_OUTPUT_PORT_TYPE
 CA <= CA~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -161,31 +159,19 @@ a[3] => Equal0.IN4
 igual <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multiplicador|bo:BOconnection|somadorsubtrator:somadorPB
+|multiplicador|bo:BOconnection|somador:somadorPB
 a[0] => Add0.IN4
-a[0] => Add1.IN8
 a[1] => Add0.IN3
-a[1] => Add1.IN7
 a[2] => Add0.IN2
-a[2] => Add1.IN6
 a[3] => Add0.IN1
-a[3] => Add1.IN5
 b[0] => Add0.IN8
-b[0] => Add1.IN4
 b[1] => Add0.IN7
-b[1] => Add1.IN3
 b[2] => Add0.IN6
-b[2] => Add1.IN2
 b[3] => Add0.IN5
-b[3] => Add1.IN1
-op => s.OUTPUTSELECT
-op => s.OUTPUTSELECT
-op => s.OUTPUTSELECT
-op => s.OUTPUTSELECT
-s[0] <= s.DB_MAX_OUTPUT_PORT_TYPE
-s[1] <= s.DB_MAX_OUTPUT_PORT_TYPE
-s[2] <= s.DB_MAX_OUTPUT_PORT_TYPE
-s[3] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |multiplicador|bo:BOconnection|mux2para1:muxA
@@ -234,30 +220,18 @@ a[3] => Equal0.IN4
 igual <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|multiplicador|bo:BOconnection|somadorsubtrator:subtratorA1
-a[0] => Add0.IN4
-a[0] => Add1.IN8
-a[1] => Add0.IN3
-a[1] => Add1.IN7
-a[2] => Add0.IN2
-a[2] => Add1.IN6
-a[3] => Add0.IN1
-a[3] => Add1.IN5
-b[0] => Add0.IN8
-b[0] => Add1.IN4
-b[1] => Add0.IN7
-b[1] => Add1.IN3
-b[2] => Add0.IN6
-b[2] => Add1.IN2
-b[3] => Add0.IN5
-b[3] => Add1.IN1
-op => s.OUTPUTSELECT
-op => s.OUTPUTSELECT
-op => s.OUTPUTSELECT
-op => s.OUTPUTSELECT
-s[0] <= s.DB_MAX_OUTPUT_PORT_TYPE
-s[1] <= s.DB_MAX_OUTPUT_PORT_TYPE
-s[2] <= s.DB_MAX_OUTPUT_PORT_TYPE
-s[3] <= s.DB_MAX_OUTPUT_PORT_TYPE
+|multiplicador|bo:BOconnection|subtrator:subtratorA1
+a[0] => Add0.IN8
+a[1] => Add0.IN7
+a[2] => Add0.IN6
+a[3] => Add0.IN5
+b[0] => Add0.IN4
+b[1] => Add0.IN3
+b[2] => Add0.IN2
+b[3] => Add0.IN1
+s[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 

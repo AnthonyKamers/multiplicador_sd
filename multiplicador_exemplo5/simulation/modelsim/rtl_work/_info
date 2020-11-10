@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dC:\Users\antho\Desktop\Anthony\UFSC\2020.1\SD\Prática\Trabalho Final\multiplicador_exemplo5\simulation\modelsim
 Ebc
-Z1 w1604582564
+Z1 w1604672314
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z4 dC:\Users\antho\Desktop\Anthony\UFSC\2020.1\SD\Prática\Trabalho Final\multiplicador_exemplo5\simulation\modelsim
@@ -15,7 +15,7 @@ L4
 VY:CX>mI=DIRVO^:QjPd;G0
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1604582619.609000
+Z8 !s108 1605042456.604000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BC/bc.vhd|
 Z10 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BC/bc.vhd|
 Z11 o-93 -work work -O0
@@ -28,7 +28,7 @@ R3
 DEx4 work 2 bc 0 22 Y:CX>mI=DIRVO^:QjPd;G0
 l15
 L12
-VW5gBSnLBGAK:jmbo]AB4g1
+VWLT88=a96gDcK]G377@;h0
 R7
 31
 R8
@@ -36,10 +36,10 @@ R9
 R10
 R11
 R12
-!s100 S<_2k8j5;<AI7_I4>:COO0
+!s100 7eo`WncZa>dI<a6AI:JR>1
 !i10b 1
 Ebo
-Z13 w1604580575
+Z13 w1605041874
 Z14 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
 Z15 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 R2
@@ -52,7 +52,7 @@ L5
 VRahFKakNYz=mBeRGINH0:0
 R7
 31
-Z18 !s108 1604582618.823000
+Z18 !s108 1605042456.374000
 Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/bo.vhd|
 Z20 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/bo.vhd|
 R11
@@ -65,9 +65,9 @@ R15
 R2
 R3
 DEx4 work 2 bo 0 22 RahFKakNYz=mBeRGINH0:0
-l48
+l46
 L14
-VK@Ukd0o^QdK2BJ3h3o4Pm0
+Vi;<H`7O4eDIna8IF1<_1`0
 R7
 31
 R18
@@ -75,7 +75,7 @@ R19
 R20
 R11
 R12
-!s100 Dh_`3GnWM:94XmbRc3<FJ1
+!s100 bM1W@KdHYA35AZURBTimo2
 !i10b 1
 Eigualzero
 Z21 w1604578141
@@ -91,7 +91,7 @@ L5
 Vkk8zmOSn>^FUG6i`oZoz02
 R7
 31
-Z24 !s108 1604582616.112000
+Z24 !s108 1605042455.699000
 Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/igualzero.vhd|
 Z26 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/igualzero.vhd|
 R11
@@ -128,15 +128,15 @@ Z29 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multip
 l0
 L5
 V[?93<7TM_Z<W6ceP`5]CX0
-!s100 l7C]MVZ:ZFVo;24JR_d2h1
 R7
 31
-!i10b 1
-Z30 !s108 1604582620.235000
+Z30 !s108 1605042456.824000
 Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/multiplicador.vhd|
 Z32 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/multiplicador.vhd|
 R11
 R12
+!s100 l7C]MVZ:ZFVo;24JR_d2h1
+!i10b 1
 Aestrutura
 R14
 R15
@@ -146,15 +146,15 @@ DEx4 work 13 multiplicador 0 22 [?93<7TM_Z<W6ceP`5]CX0
 l35
 L14
 VciC0;K8Z8g0>9zgimj_EU3
-!s100 MDfafz>UDVhzTbFEJGi6U3
 R7
 31
-!i10b 1
 R30
 R31
 R32
 R11
 R12
+!s100 MDfafz>UDVhzTbFEJGi6U3
+!i10b 1
 Emux2para1
 Z33 w1604578112
 R2
@@ -167,7 +167,7 @@ L4
 VT>Uoej=7LaLB[cj@P@6jl2
 R7
 31
-Z36 !s108 1604582616.852000
+Z36 !s108 1605042455.919000
 Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/mux2para1.vhd|
 Z38 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/mux2para1.vhd|
 R11
@@ -204,7 +204,7 @@ L5
 V>>M4OeS=CL]iVhHKQW42M0
 R7
 31
-Z42 !s108 1604582617.494000
+Z42 !s108 1605042456.184000
 Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/registrador.vhd|
 Z44 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/registrador.vhd|
 R11
@@ -229,36 +229,36 @@ R11
 R12
 !s100 oc4b;NBW68;eeS?XNF6>31
 !i10b 1
-Esomadorsubtrator
-Z45 w1604578152
+Esomador
+Z45 w1605041708
 R14
 R15
 R2
 R3
 R4
-Z46 8C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somadorsubtrator.vhd
-Z47 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somadorsubtrator.vhd
+Z46 8C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somador.vhd
+Z47 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somador.vhd
 l0
 L5
-V2M9SZDEodkeeV;n:VBAGl0
+VBEXQ]1zY:U]SXddT^G]zE2
 R7
 31
-Z48 !s108 1604582618.149000
-Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somadorsubtrator.vhd|
-Z50 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somadorsubtrator.vhd|
+Z48 !s108 1605042457.053000
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somador.vhd|
+Z50 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somador.vhd|
 R11
 R12
-!s100 aMggnlDmViEO:3OD9EdIF3
+!s100 [P>V]K4=YdXVV^=WbcY3f0
 !i10b 1
 Aestrutura
 R14
 R15
 R2
 R3
-DEx4 work 16 somadorsubtrator 0 22 2M9SZDEodkeeV;n:VBAGl0
-l12
-L11
-V833R`WUi_l1dlb_aCC89P1
+DEx4 work 7 somador 0 22 BEXQ]1zY:U]SXddT^G]zE2
+l11
+L10
+VMU`6NI9O7;2`MzNzeRTbV2
 R7
 31
 R48
@@ -266,5 +266,44 @@ R49
 R50
 R11
 R12
-!s100 WA=KjK590Ez=;GjiS<;Vo0
+!s100 @P]`13Jck]VU;kPhKdPEI0
 !i10b 1
+Esubtrator
+Z51 w1605041750
+R14
+R15
+R2
+R3
+R4
+Z52 8C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/subtrator.vhd
+Z53 FC:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/subtrator.vhd
+l0
+L5
+V8bi4zdnD`;DUlzTXGB7:12
+!s100 iZLTmHiPCdf?KTd4>>iY01
+R7
+31
+!i10b 1
+Z54 !s108 1605042457.269000
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/subtrator.vhd|
+Z56 !s107 C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/subtrator.vhd|
+R11
+R12
+Aestrutura
+R14
+R15
+R2
+R3
+DEx4 work 9 subtrator 0 22 8bi4zdnD`;DUlzTXGB7:12
+l11
+L10
+V6C`8_`IC@@h:L1z9==A1[2
+!s100 mOOiT]NBGPaD;PC@J4fVM3
+R7
+31
+!i10b 1
+R54
+R55
+R56
+R11
+R12

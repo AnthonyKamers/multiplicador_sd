@@ -13,27 +13,19 @@ END bo;
 
 ARCHITECTURE estrutura OF bo IS
 	
-	COMPONENT registrador_r IS
-	PORT (clk, reset, carga : IN STD_LOGIC;
-		  d : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-		  q : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
-	END COMPONENT;
-	
-	COMPONENT registrador IS
-	PORT (clk, carga : IN STD_LOGIC;
-		  d : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-		  q : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
-	END COMPONENT;
-	
 	COMPONENT mux2para1 IS
 	PORT ( a, b : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 				sel: IN STD_LOGIC;
 				y : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 	END COMPONENT;
 	
-	COMPONENT somadorsubtrator IS
+	COMPONENT somador IS
 	PORT (a, b : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-			op: IN STD_LOGIC;
+			s : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
+	END COMPONENT;
+	
+	COMPONENT subtrator IS
+	PORT (a, b : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 			s : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 	END COMPONENT;
 	
@@ -41,31 +33,37 @@ ARCHITECTURE estrutura OF bo IS
 	PORT (a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 	igual : OUT STD_LOGIC);
 	END COMPONENT;
+	
+	COMPONENT registrador IS
+	PORT (clk, carga : IN STD_LOGIC;
+		  d : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  q : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
+	END COMPONENT;
 		
-	SIGNAL saidaMuxP, saidaMuxA, saidaRegA, saidaRegP, saidaRegB, fixedValue: STD_LOGIC_VECTOR (3 DOWNTO 0);
+	SIGNAL saidaMuxP, saidaMuxA, saidaRegA, saidaRegP, saidaRegB, valor1: STD_LOGIC_VECTOR (3 DOWNTO 0);
 	SIGNAL saidaSomador, zeroTudo, saidaSubtrator, saidaRegMult: STD_LOGIC_VECTOR(3 DOWNTO 0);
 
 BEGIN
 	zeroTudo <= "0000";
-	fixedValue <= "0001";
+	valor1 <= "0001";
 	
 	------------------------------------------------------------------------------
 	
 	muxP: mux2para1 PORT MAP (saidaSomador, zeroTudo, MP, saidaMuxP);
-	-- regP: registrador_r PORT MAP (clk, ini, CP, saidaMuxP, saidaRegP);
 	regP: registrador PORT MAP (clk, CP, saidaMuxP, saidaRegP);
 	regMultPortMap: registrador PORT MAP (clk, CMULT, saidaRegP, saidaRegMult);
 	
 	regB: registrador PORT MAP (clk, CB, entB, saidaRegB);
 	geraBz: igualzero PORT MAP (saidaRegB, Bz);
-	somadorPB: somadorsubtrator PORT MAP (saidaRegP, saidaRegB, '0', saidaSomador);
+	somadorPB: somador PORT MAP (saidaRegP, saidaRegB, saidaSomador);
 	
 	------------------------------------------------------------------------------
 	
 	muxA: mux2para1 PORT MAP (saidaSubtrator, entA, MA, saidaMuxA);
 	regA: registrador PORT MAP (clk, CA, saidaMuxA, saidaRegA);
 	geraAz: igualzero PORT MAP (saidaRegA, Az);
-	subtratorA1: somadorsubtrator PORT MAP (saidaRegA, fixedValue, '1', saidaSubtrator);
+	subtratorA1: subtrator PORT MAP (saidaRegA, valor1, saidaSubtrator);
+	
 	
 	------------------------------------------------------------------------------
 	

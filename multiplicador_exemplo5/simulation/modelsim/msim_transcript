@@ -35,15 +35,6 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity registrador
 # -- Compiling architecture estrutura of registrador
-# vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somadorsubtrator.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity somadorsubtrator
-# -- Compiling architecture estrutura of somadorsubtrator
 # vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/bo.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -69,6 +60,24 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity multiplicador
 # -- Compiling architecture estrutura of multiplicador
+# vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity somador
+# -- Compiling architecture estrutura of somador
+# vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/subtrator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity subtrator
+# -- Compiling architecture estrutura of subtrator
 # 
 vcom -reportprogress 300 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/multiplicador_tb.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -93,7 +102,8 @@ vsim +altera -do multiplicador_run_msim_rtl_vhdl.do -l msim_transcript -gui work
 # Loading work.mux2para1(comportamento)
 # Loading work.registrador(estrutura)
 # Loading work.igualzero(estrutura)
-# Loading work.somadorsubtrator(estrutura)
+# Loading work.somador(estrutura)
+# Loading work.subtrator(estrutura)
 # do multiplicador_run_msim_rtl_vhdl.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -127,15 +137,6 @@ vsim +altera -do multiplicador_run_msim_rtl_vhdl.do -l msim_transcript -gui work
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity registrador
 # -- Compiling architecture estrutura of registrador
-# vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somadorsubtrator.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity somadorsubtrator
-# -- Compiling architecture estrutura of somadorsubtrator
 # vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/bo.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -161,9 +162,35 @@ vsim +altera -do multiplicador_run_msim_rtl_vhdl.do -l msim_transcript -gui work
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity multiplicador
 # -- Compiling architecture estrutura of multiplicador
+# vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity somador
+# -- Compiling architecture estrutura of somador
+# vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/subtrator.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity subtrator
+# -- Compiling architecture estrutura of subtrator
 # 
 add wave *
-run 400ns
+add wave -position end  sim:/multiplicador_tb/M1/BCconnection/state
+add wave -position end  sim:/multiplicador_tb/M1/BOconnection/CMULT
+add wave -position end  sim:/multiplicador_tb/M1/BOconnection/CP
+add wave -position end  sim:/multiplicador_tb/M1/BOconnection/MP
+add wave -position end  sim:/multiplicador_tb/M1/BOconnection/saidaRegA
+add wave -position end  sim:/multiplicador_tb/M1/BOconnection/saidaMuxP
+add wave -position end  sim:/multiplicador_tb/M1/BOconnection/saidaRegP
+add wave -position end  sim:/multiplicador_tb/M1/BOconnection/saidaSomador
+run 600ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /multiplicador_tb/M1/BOconnection/subtratorA1
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).

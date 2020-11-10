@@ -1,5 +1,5 @@
 Analysis & Synthesis report for multiplicador
-Thu Nov 05 10:22:56 2020
+Tue Nov 10 18:01:05 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,11 +16,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. State Machine - |multiplicador|bc:BCconnection|state
   9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Port Connectivity Checks: "bo:BOconnection|somadorsubtrator:subtratorA1"
- 12. Port Connectivity Checks: "bo:BOconnection|somadorsubtrator:somadorPB"
- 13. Port Connectivity Checks: "bo:BOconnection|mux2para1:muxP"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 11. Port Connectivity Checks: "bo:BOconnection|subtrator:subtratorA1"
+ 12. Port Connectivity Checks: "bo:BOconnection|mux2para1:muxP"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +45,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 05 10:22:56 2020           ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 10 18:01:05 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; multiplicador                                   ;
 ; Top-level Entity Name              ; multiplicador                                   ;
 ; Family                             ; Cyclone II                                      ;
 ; Total logic elements               ; 28                                              ;
-;     Total combinational functions  ; 17                                              ;
+;     Total combinational functions  ; 18                                              ;
 ;     Dedicated logic registers      ; 25                                              ;
 ; Total registers                    ; 25                                              ;
 ; Total pins                         ; 16                                              ;
@@ -159,19 +158,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                        ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; BO/igualzero.vhd                 ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/igualzero.vhd        ;         ;
-; BO/mux2para1.vhd                 ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/mux2para1.vhd        ;         ;
-; BO/registrador.vhd               ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/registrador.vhd      ;         ;
-; BO/somadorsubtrator.vhd          ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somadorsubtrator.vhd ;         ;
-; BO/bo.vhd                        ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/bo.vhd               ;         ;
-; BC/bc.vhd                        ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BC/bc.vhd               ;         ;
-; multiplicador.vhd                ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/multiplicador.vhd       ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; BO/igualzero.vhd                 ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/igualzero.vhd   ;         ;
+; BO/mux2para1.vhd                 ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/mux2para1.vhd   ;         ;
+; BO/registrador.vhd               ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/registrador.vhd ;         ;
+; BO/bo.vhd                        ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/bo.vhd          ;         ;
+; BC/bc.vhd                        ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BC/bc.vhd          ;         ;
+; multiplicador.vhd                ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/multiplicador.vhd  ;         ;
+; BO/somador.vhd                   ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somador.vhd     ;         ;
+; BO/subtrator.vhd                 ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/subtrator.vhd   ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -181,14 +181,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Estimated Total logic elements              ; 28    ;
 ;                                             ;       ;
-; Total combinational functions               ; 17    ;
+; Total combinational functions               ; 18    ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 6     ;
-;     -- 3 input functions                    ; 8     ;
+;     -- 3 input functions                    ; 9     ;
 ;     -- <=2 input functions                  ; 3     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 14    ;
+;     -- normal mode                          ; 15    ;
 ;     -- arithmetic mode                      ; 3     ;
 ;                                             ;       ;
 ; Total registers                             ; 25    ;
@@ -199,8 +199,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 25    ;
-; Total fan-out                               ; 138   ;
-; Average fan-out                             ; 2.38  ;
+; Total fan-out                               ; 141   ;
+; Average fan-out                             ; 2.39  ;
 +---------------------------------------------+-------+
 
 
@@ -209,8 +209,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
-; |multiplicador                     ; 17 (0)            ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |multiplicador                                            ; work         ;
-;    |bc:BCconnection|               ; 6 (6)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bc:BCconnection                            ; work         ;
+; |multiplicador                     ; 18 (0)            ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |multiplicador                                            ; work         ;
+;    |bc:BCconnection|               ; 7 (7)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bc:BCconnection                            ; work         ;
 ;    |bo:BOconnection|               ; 11 (0)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection                            ; work         ;
 ;       |igualzero:geraAz|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|igualzero:geraAz           ; work         ;
 ;       |igualzero:geraBz|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|igualzero:geraBz           ; work         ;
@@ -242,9 +242,9 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------------------+
 ; Register name                         ; Reason for Removal             ;
 +---------------------------------------+--------------------------------+
-; bc:BCconnection|CB                    ; Merged with bc:BCconnection|MA ;
-; bc:BCconnection|MP                    ; Merged with bc:BCconnection|MA ;
 ; bc:BCconnection|CP                    ; Merged with bc:BCconnection|CA ;
+; bc:BCconnection|MP                    ; Merged with bc:BCconnection|MA ;
+; bc:BCconnection|state.S2              ; Merged with bc:BCconnection|CA ;
 ; Total Number of Removed Registers = 3 ;                                ;
 +---------------------------------------+--------------------------------+
 
@@ -257,31 +257,21 @@ Encoding Type:  One-Hot
 ; Total registers                              ; 25    ;
 ; Number of registers using Synchronous Clear  ; 4     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Clear ; 9     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------+
-; Port Connectivity Checks: "bo:BOconnection|somadorsubtrator:subtratorA1" ;
-+---------+-------+----------+---------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                     ;
-+---------+-------+----------+---------------------------------------------+
-; b[3..1] ; Input ; Info     ; Stuck at GND                                ;
-; b[0]    ; Input ; Info     ; Stuck at VCC                                ;
-; op      ; Input ; Info     ; Stuck at VCC                                ;
-+---------+-------+----------+---------------------------------------------+
-
-
-+------------------------------------------------------------------------+
-; Port Connectivity Checks: "bo:BOconnection|somadorsubtrator:somadorPB" ;
-+------+-------+----------+----------------------------------------------+
-; Port ; Type  ; Severity ; Details                                      ;
-+------+-------+----------+----------------------------------------------+
-; op   ; Input ; Info     ; Stuck at GND                                 ;
-+------+-------+----------+----------------------------------------------+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "bo:BOconnection|subtrator:subtratorA1" ;
++---------+-------+----------+--------------------------------------+
+; Port    ; Type  ; Severity ; Details                              ;
++---------+-------+----------+--------------------------------------+
+; b[3..1] ; Input ; Info     ; Stuck at GND                         ;
+; b[0]    ; Input ; Info     ; Stuck at VCC                         ;
++---------+-------+----------+--------------------------------------+
 
 
 +------------------------------------------------------------+
@@ -308,7 +298,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Nov 05 10:22:54 2020
+    Info: Processing started: Tue Nov 10 18:01:04 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off multiplicador -c multiplicador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file bo/igualzero.vhd
@@ -338,23 +328,30 @@ Info (12021): Found 2 design units, including 1 entities, in source file multipl
 Info (12021): Found 2 design units, including 1 entities, in source file multiplicador_tb.vhd
     Info (12022): Found design unit 1: multiplicador_tb-tb
     Info (12023): Found entity 1: multiplicador_tb
+Info (12021): Found 2 design units, including 1 entities, in source file bo/somador.vhd
+    Info (12022): Found design unit 1: somador-estrutura
+    Info (12023): Found entity 1: somador
+Info (12021): Found 2 design units, including 1 entities, in source file bo/subtrator.vhd
+    Info (12022): Found design unit 1: subtrator-estrutura
+    Info (12023): Found entity 1: subtrator
 Info (12127): Elaborating entity "multiplicador" for the top level hierarchy
 Info (12128): Elaborating entity "bc" for hierarchy "bc:BCconnection"
 Info (12128): Elaborating entity "bo" for hierarchy "bo:BOconnection"
 Info (12128): Elaborating entity "mux2para1" for hierarchy "bo:BOconnection|mux2para1:muxP"
 Info (12128): Elaborating entity "registrador" for hierarchy "bo:BOconnection|registrador:regP"
 Info (12128): Elaborating entity "igualzero" for hierarchy "bo:BOconnection|igualzero:geraBz"
-Info (12128): Elaborating entity "somadorsubtrator" for hierarchy "bo:BOconnection|somadorsubtrator:somadorPB"
+Info (12128): Elaborating entity "somador" for hierarchy "bo:BOconnection|somador:somadorPB"
+Info (12128): Elaborating entity "subtrator" for hierarchy "bo:BOconnection|subtrator:subtratorA1"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 45 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 29 logic cells
+    Info (21061): Implemented 28 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4634 megabytes
-    Info: Processing ended: Thu Nov 05 10:22:56 2020
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Tue Nov 10 18:01:05 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
