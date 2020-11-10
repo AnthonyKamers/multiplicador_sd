@@ -1,0 +1,1211 @@
+TimeQuest Timing Analyzer report for multiplicador
+Tue Nov 10 18:47:46 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Recovery: 'clk'
+ 14. Slow Model Removal: 'clk'
+ 15. Slow Model Minimum Pulse Width: 'clk'
+ 16. Setup Times
+ 17. Hold Times
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'clk'
+ 26. Fast Model Hold: 'clk'
+ 27. Fast Model Recovery: 'clk'
+ 28. Fast Model Removal: 'clk'
+ 29. Fast Model Minimum Pulse Width: 'clk'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; multiplicador                                                     ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5F256C6                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 316.36 MHz ; 316.36 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -2.161 ; -17.635       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Slow Model Recovery Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.446 ; -1.784        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 1.216 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -19.380               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                    ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.161 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.197      ;
+; -2.051 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.087      ;
+; -1.987 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 3.023      ;
+; -1.963 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.999      ;
+; -1.951 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.987      ;
+; -1.920 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.956      ;
+; -1.911 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.947      ;
+; -1.855 ; bo:BOportMap|registrador_r:regP|q[3] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.891      ;
+; -1.849 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.885      ;
+; -1.843 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.879      ;
+; -1.814 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.850      ;
+; -1.810 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.846      ;
+; -1.801 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.837      ;
+; -1.782 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.818      ;
+; -1.749 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.785      ;
+; -1.746 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.782      ;
+; -1.739 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.775      ;
+; -1.737 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.773      ;
+; -1.722 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.758      ;
+; -1.713 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.749      ;
+; -1.710 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.746      ;
+; -1.706 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.742      ;
+; -1.704 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.740      ;
+; -1.701 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.737      ;
+; -1.681 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.717      ;
+; -1.675 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.711      ;
+; -1.651 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.687      ;
+; -1.643 ; bo:BOportMap|registrador:regA|q[3]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.679      ;
+; -1.639 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.675      ;
+; -1.543 ; bo:BOportMap|registrador_r:regP|q[3] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.579      ;
+; -1.541 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.577      ;
+; -1.532 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.568      ;
+; -1.532 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.568      ;
+; -1.531 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.567      ;
+; -1.530 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.566      ;
+; -1.508 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.544      ;
+; -1.502 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.538      ;
+; -1.499 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.535      ;
+; -1.496 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.532      ;
+; -1.494 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.530      ;
+; -1.470 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.506      ;
+; -1.465 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.501      ;
+; -1.464 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.500      ;
+; -1.462 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.498      ;
+; -1.454 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.490      ;
+; -1.437 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.473      ;
+; -1.369 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.405      ;
+; -1.331 ; bo:BOportMap|registrador:regA|q[3]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.367      ;
+; -1.290 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.326      ;
+; -1.287 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.323      ;
+; -1.285 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.321      ;
+; -1.279 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.315      ;
+; -1.278 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.314      ;
+; -1.257 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.293      ;
+; -1.254 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.290      ;
+; -1.248 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.284      ;
+; -1.243 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.279      ;
+; -1.223 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.259      ;
+; -1.193 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.229      ;
+; -1.191 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.227      ;
+; -1.124 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.160      ;
+; -1.115 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.151      ;
+; -1.060 ; bo:BOportMap|registrador:regB|q[3]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.096      ;
+; -1.012 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.048      ;
+; -1.012 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.048      ;
+; -1.012 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.048      ;
+; -1.012 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.048      ;
+; -1.012 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.048      ;
+; -1.010 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.046      ;
+; -0.982 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.018      ;
+; -0.980 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.016      ;
+; -0.975 ; bc:BCportMap|state.S4                ; bc:BCportMap|state.S2                ; clk          ; clk         ; 1.000        ; 0.000      ; 2.011      ;
+; -0.887 ; bo:BOportMap|registrador:regA|q[1]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.923      ;
+; -0.847 ; bo:BOportMap|registrador:regA|q[1]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.883      ;
+; -0.839 ; bo:BOportMap|registrador:regA|q[0]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.875      ;
+; -0.799 ; bo:BOportMap|registrador:regA|q[0]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.835      ;
+; -0.756 ; bo:BOportMap|registrador:regA|q[2]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.792      ;
+; -0.748 ; bo:BOportMap|registrador:regB|q[3]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.784      ;
+; -0.716 ; bo:BOportMap|registrador:regA|q[2]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.752      ;
+; -0.702 ; bc:BCportMap|state.S1                ; bc:BCportMap|state.S2                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.738      ;
+; -0.621 ; bo:BOportMap|registrador:regB|q[3]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.657      ;
+; -0.618 ; bo:BOportMap|registrador:regB|q[3]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.654      ;
+; -0.613 ; bo:BOportMap|registrador:regA|q[3]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.649      ;
+; -0.581 ; bo:BOportMap|registrador:regB|q[0]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.617      ;
+; -0.578 ; bo:BOportMap|registrador:regB|q[0]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.614      ;
+; -0.573 ; bo:BOportMap|registrador:regA|q[3]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.609      ;
+; -0.359 ; bo:BOportMap|registrador:regB|q[1]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.395      ;
+; -0.356 ; bo:BOportMap|registrador:regB|q[1]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.392      ;
+; -0.351 ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.387      ;
+; -0.351 ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.387      ;
+; -0.351 ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.387      ;
+; -0.351 ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.387      ;
+; -0.291 ; bc:BCportMap|state.S2                ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.327      ;
+; -0.285 ; bc:BCportMap|state.S2                ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.321      ;
+; -0.219 ; bo:BOportMap|registrador:regB|q[2]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.255      ;
+; -0.216 ; bo:BOportMap|registrador:regB|q[2]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 1.252      ;
+; -0.189 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.225      ;
+; -0.189 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.225      ;
+; -0.189 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.225      ;
+; -0.189 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.225      ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                    ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; bc:BCportMap|state.S0                ; bc:BCportMap|state.S0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.702 ; bc:BCportMap|state.S3                ; bc:BCportMap|state.S4                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.968      ;
+; 0.751 ; bc:BCportMap|state.S0                ; bc:BCportMap|state.S1                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.017      ;
+; 0.757 ; bc:BCportMap|state.S5                ; bc:BCportMap|state.S0                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.023      ;
+; 0.959 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.225      ;
+; 0.959 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.225      ;
+; 0.959 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.225      ;
+; 0.959 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.225      ;
+; 0.986 ; bo:BOportMap|registrador:regB|q[2]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.252      ;
+; 0.989 ; bo:BOportMap|registrador:regB|q[2]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.255      ;
+; 1.055 ; bc:BCportMap|state.S2                ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.321      ;
+; 1.061 ; bc:BCportMap|state.S2                ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.327      ;
+; 1.121 ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.387      ;
+; 1.121 ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.387      ;
+; 1.121 ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.387      ;
+; 1.121 ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.387      ;
+; 1.126 ; bo:BOportMap|registrador:regB|q[1]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.392      ;
+; 1.129 ; bo:BOportMap|registrador:regB|q[1]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.395      ;
+; 1.326 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.592      ;
+; 1.343 ; bo:BOportMap|registrador:regA|q[3]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.609      ;
+; 1.348 ; bo:BOportMap|registrador:regB|q[0]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.614      ;
+; 1.350 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.616      ;
+; 1.351 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.351 ; bo:BOportMap|registrador:regB|q[0]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.354 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.620      ;
+; 1.383 ; bo:BOportMap|registrador:regA|q[3]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.649      ;
+; 1.388 ; bo:BOportMap|registrador:regB|q[3]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.654      ;
+; 1.391 ; bo:BOportMap|registrador:regB|q[3]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.657      ;
+; 1.472 ; bc:BCportMap|state.S1                ; bc:BCportMap|state.S2                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.738      ;
+; 1.486 ; bo:BOportMap|registrador:regA|q[2]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.752      ;
+; 1.518 ; bo:BOportMap|registrador:regB|q[3]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.784      ;
+; 1.526 ; bo:BOportMap|registrador:regA|q[2]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.792      ;
+; 1.569 ; bo:BOportMap|registrador:regA|q[0]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.835      ;
+; 1.609 ; bo:BOportMap|registrador:regA|q[0]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.875      ;
+; 1.617 ; bo:BOportMap|registrador:regA|q[1]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.883      ;
+; 1.657 ; bo:BOportMap|registrador:regA|q[1]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.923      ;
+; 1.745 ; bc:BCportMap|state.S4                ; bc:BCportMap|state.S2                ; clk          ; clk         ; 0.000        ; 0.000      ; 2.011      ;
+; 1.750 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.016      ;
+; 1.752 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.018      ;
+; 1.780 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.046      ;
+; 1.782 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.048      ;
+; 1.816 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.082      ;
+; 1.830 ; bo:BOportMap|registrador:regB|q[3]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.096      ;
+; 1.877 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.143      ;
+; 1.879 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.145      ;
+; 1.885 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.151      ;
+; 1.894 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.160      ;
+; 1.961 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.227      ;
+; 1.961 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.227      ;
+; 1.963 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.229      ;
+; 1.972 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.238      ;
+; 1.975 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.241      ;
+; 1.984 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.250      ;
+; 2.013 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.279      ;
+; 2.018 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.284      ;
+; 2.024 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.290      ;
+; 2.027 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.293      ;
+; 2.048 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.314      ;
+; 2.049 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.315      ;
+; 2.057 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.323      ;
+; 2.060 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.326      ;
+; 2.101 ; bo:BOportMap|registrador:regA|q[3]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.367      ;
+; 2.128 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.394      ;
+; 2.139 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.405      ;
+; 2.207 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.473      ;
+; 2.224 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.490      ;
+; 2.235 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.501      ;
+; 2.240 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.506      ;
+; 2.264 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.530      ;
+; 2.266 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.532      ;
+; 2.269 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.535      ;
+; 2.272 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.538      ;
+; 2.278 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.544      ;
+; 2.300 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.566      ;
+; 2.301 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.567      ;
+; 2.302 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.568      ;
+; 2.302 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.568      ;
+; 2.311 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.577      ;
+; 2.313 ; bo:BOportMap|registrador_r:regP|q[3] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.579      ;
+; 2.409 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.675      ;
+; 2.413 ; bo:BOportMap|registrador:regA|q[3]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.679      ;
+; 2.421 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.687      ;
+; 2.445 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.711      ;
+; 2.451 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.717      ;
+; 2.471 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.737      ;
+; 2.474 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.740      ;
+; 2.476 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.742      ;
+; 2.480 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.746      ;
+; 2.483 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.749      ;
+; 2.492 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.758      ;
+; 2.507 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.773      ;
+; 2.516 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.782      ;
+; 2.519 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.785      ;
+; 2.552 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.818      ;
+; 2.584 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.850      ;
+; 2.613 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.879      ;
+; 2.619 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.885      ;
+; 2.625 ; bo:BOportMap|registrador_r:regP|q[3] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.891      ;
+; 2.681 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 2.947      ;
+; 2.690 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 2.956      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'clk'                                                                                                                  ;
++--------+-----------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node             ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.446 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.482      ;
+; -0.446 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.482      ;
+; -0.446 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.482      ;
+; -0.446 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.482      ;
++--------+-----------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'clk'                                                                                                                  ;
++-------+-----------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node             ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.216 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.216 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.216 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.216 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.482      ;
++-------+-----------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bc:BCportMap|state.S0                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bc:BCportMap|state.S0                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bc:BCportMap|state.S1                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bc:BCportMap|state.S1                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bc:BCportMap|state.S2                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bc:BCportMap|state.S2                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bc:BCportMap|state.S3                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bc:BCportMap|state.S3                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bc:BCportMap|state.S4                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bc:BCportMap|state.S4                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bc:BCportMap|state.S5                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bc:BCportMap|state.S5                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BCportMap|state.S0|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BCportMap|state.S0|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BCportMap|state.S1|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BCportMap|state.S1|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BCportMap|state.S2|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BCportMap|state.S2|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BCportMap|state.S3|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BCportMap|state.S3|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BCportMap|state.S4|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BCportMap|state.S4|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BCportMap|state.S5|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BCportMap|state.S5|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regA|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regA|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regA|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regA|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regA|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regA|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regA|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regA|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regB|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regB|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regB|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regB|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regB|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regB|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regB|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regB|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regP|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regP|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regP|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regP|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regP|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regP|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regP|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regP|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; entA[*]   ; clk        ; 3.565 ; 3.565 ; Rise       ; clk             ;
+;  entA[0]  ; clk        ; 3.468 ; 3.468 ; Rise       ; clk             ;
+;  entA[1]  ; clk        ; 3.565 ; 3.565 ; Rise       ; clk             ;
+;  entA[2]  ; clk        ; 0.730 ; 0.730 ; Rise       ; clk             ;
+;  entA[3]  ; clk        ; 0.589 ; 0.589 ; Rise       ; clk             ;
+; entB[*]   ; clk        ; 3.252 ; 3.252 ; Rise       ; clk             ;
+;  entB[0]  ; clk        ; 3.118 ; 3.118 ; Rise       ; clk             ;
+;  entB[1]  ; clk        ; 3.075 ; 3.075 ; Rise       ; clk             ;
+;  entB[2]  ; clk        ; 3.225 ; 3.225 ; Rise       ; clk             ;
+;  entB[3]  ; clk        ; 3.252 ; 3.252 ; Rise       ; clk             ;
+; inicio    ; clk        ; 3.157 ; 3.157 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; entA[*]   ; clk        ; -0.359 ; -0.359 ; Rise       ; clk             ;
+;  entA[0]  ; clk        ; -3.238 ; -3.238 ; Rise       ; clk             ;
+;  entA[1]  ; clk        ; -3.335 ; -3.335 ; Rise       ; clk             ;
+;  entA[2]  ; clk        ; -0.500 ; -0.500 ; Rise       ; clk             ;
+;  entA[3]  ; clk        ; -0.359 ; -0.359 ; Rise       ; clk             ;
+; entB[*]   ; clk        ; -2.845 ; -2.845 ; Rise       ; clk             ;
+;  entB[0]  ; clk        ; -2.888 ; -2.888 ; Rise       ; clk             ;
+;  entB[1]  ; clk        ; -2.845 ; -2.845 ; Rise       ; clk             ;
+;  entB[2]  ; clk        ; -2.995 ; -2.995 ; Rise       ; clk             ;
+;  entB[3]  ; clk        ; -3.022 ; -3.022 ; Rise       ; clk             ;
+; inicio    ; clk        ; -2.923 ; -2.923 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pronto    ; clk        ; 6.054 ; 6.054 ; Rise       ; clk             ;
+; saida[*]  ; clk        ; 6.364 ; 6.364 ; Rise       ; clk             ;
+;  saida[0] ; clk        ; 6.062 ; 6.062 ; Rise       ; clk             ;
+;  saida[1] ; clk        ; 6.190 ; 6.190 ; Rise       ; clk             ;
+;  saida[2] ; clk        ; 6.289 ; 6.289 ; Rise       ; clk             ;
+;  saida[3] ; clk        ; 6.364 ; 6.364 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pronto    ; clk        ; 6.054 ; 6.054 ; Rise       ; clk             ;
+; saida[*]  ; clk        ; 6.062 ; 6.062 ; Rise       ; clk             ;
+;  saida[0] ; clk        ; 6.062 ; 6.062 ; Rise       ; clk             ;
+;  saida[1] ; clk        ; 6.190 ; 6.190 ; Rise       ; clk             ;
+;  saida[2] ; clk        ; 6.289 ; 6.289 ; Rise       ; clk             ;
+;  saida[3] ; clk        ; 6.364 ; 6.364 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.398 ; -1.760        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Recovery Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.208 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.672 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -19.380               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                    ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.398 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.430      ;
+; -0.353 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.385      ;
+; -0.317 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.349      ;
+; -0.314 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.346      ;
+; -0.310 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.342      ;
+; -0.292 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.324      ;
+; -0.283 ; bo:BOportMap|registrador_r:regP|q[3] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.315      ;
+; -0.257 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.289      ;
+; -0.254 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.286      ;
+; -0.247 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.279      ;
+; -0.237 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.269      ;
+; -0.236 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.268      ;
+; -0.223 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.255      ;
+; -0.221 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.253      ;
+; -0.211 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.243      ;
+; -0.209 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.241      ;
+; -0.208 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.240      ;
+; -0.204 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.236      ;
+; -0.199 ; bo:BOportMap|registrador:regA|q[3]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.231      ;
+; -0.191 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.223      ;
+; -0.185 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.217      ;
+; -0.173 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.205      ;
+; -0.170 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.202      ;
+; -0.170 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.202      ;
+; -0.167 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.199      ;
+; -0.166 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.198      ;
+; -0.155 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.187      ;
+; -0.152 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.184      ;
+; -0.148 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.180      ;
+; -0.124 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.156      ;
+; -0.124 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.156      ;
+; -0.121 ; bo:BOportMap|registrador_r:regP|q[3] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.153      ;
+; -0.119 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.151      ;
+; -0.117 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.149      ;
+; -0.115 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.147      ;
+; -0.095 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.127      ;
+; -0.089 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.121      ;
+; -0.086 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.118      ;
+; -0.083 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.115      ;
+; -0.082 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.114      ;
+; -0.079 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.111      ;
+; -0.079 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.111      ;
+; -0.077 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.109      ;
+; -0.075 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.107      ;
+; -0.067 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.099      ;
+; -0.061 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.093      ;
+; -0.059 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.091      ;
+; -0.046 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.078      ;
+; -0.040 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.072      ;
+; -0.037 ; bo:BOportMap|registrador:regA|q[3]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.069      ;
+; -0.033 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.065      ;
+; -0.028 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.060      ;
+; -0.023 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.055      ;
+; -0.018 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.050      ;
+; -0.008 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.040      ;
+; -0.004 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.036      ;
+; 0.003  ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.029      ;
+; 0.004  ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.028      ;
+; 0.004  ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.028      ;
+; 0.004  ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.028      ;
+; 0.004  ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.028      ;
+; 0.010  ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.022      ;
+; 0.019  ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.013      ;
+; 0.022  ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.010      ;
+; 0.024  ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.008      ;
+; 0.055  ; bo:BOportMap|registrador:regB|q[3]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.977      ;
+; 0.062  ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.970      ;
+; 0.079  ; bc:BCportMap|state.S4                ; bc:BCportMap|state.S2                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.953      ;
+; 0.108  ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.924      ;
+; 0.111  ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.921      ;
+; 0.112  ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.920      ;
+; 0.115  ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.917      ;
+; 0.122  ; bo:BOportMap|registrador:regA|q[1]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.910      ;
+; 0.129  ; bo:BOportMap|registrador:regA|q[1]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.903      ;
+; 0.139  ; bo:BOportMap|registrador:regA|q[0]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.893      ;
+; 0.146  ; bo:BOportMap|registrador:regA|q[0]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.886      ;
+; 0.202  ; bo:BOportMap|registrador:regA|q[2]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.830      ;
+; 0.207  ; bc:BCportMap|state.S1                ; bc:BCportMap|state.S2                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.825      ;
+; 0.209  ; bo:BOportMap|registrador:regA|q[2]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.823      ;
+; 0.217  ; bo:BOportMap|registrador:regB|q[3]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.815      ;
+; 0.244  ; bo:BOportMap|registrador:regB|q[3]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.788      ;
+; 0.247  ; bo:BOportMap|registrador:regB|q[3]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.785      ;
+; 0.255  ; bo:BOportMap|registrador:regB|q[0]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.777      ;
+; 0.258  ; bo:BOportMap|registrador:regB|q[0]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.774      ;
+; 0.261  ; bo:BOportMap|registrador:regA|q[3]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.771      ;
+; 0.268  ; bo:BOportMap|registrador:regA|q[3]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.764      ;
+; 0.286  ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.746      ;
+; 0.286  ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.746      ;
+; 0.286  ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.746      ;
+; 0.286  ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.746      ;
+; 0.358  ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.674      ;
+; 0.358  ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.674      ;
+; 0.358  ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.674      ;
+; 0.358  ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.674      ;
+; 0.376  ; bo:BOportMap|registrador:regB|q[1]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.656      ;
+; 0.379  ; bo:BOportMap|registrador:regB|q[1]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.653      ;
+; 0.381  ; bc:BCportMap|state.S2                ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.651      ;
+; 0.384  ; bc:BCportMap|state.S2                ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.648      ;
+; 0.408  ; bo:BOportMap|registrador:regB|q[2]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.624      ;
+; 0.411  ; bo:BOportMap|registrador:regB|q[2]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 1.000        ; 0.000      ; 0.621      ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                    ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; bc:BCportMap|state.S0                ; bc:BCportMap|state.S0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.321 ; bc:BCportMap|state.S3                ; bc:BCportMap|state.S4                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.473      ;
+; 0.358 ; bc:BCportMap|state.S5                ; bc:BCportMap|state.S0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.360 ; bc:BCportMap|state.S0                ; bc:BCportMap|state.S1                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.469 ; bo:BOportMap|registrador:regB|q[2]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.621      ;
+; 0.472 ; bo:BOportMap|registrador:regB|q[2]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.624      ;
+; 0.496 ; bc:BCportMap|state.S2                ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.499 ; bc:BCportMap|state.S2                ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.501 ; bo:BOportMap|registrador:regB|q[1]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.653      ;
+; 0.504 ; bo:BOportMap|registrador:regB|q[1]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.656      ;
+; 0.522 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.674      ;
+; 0.522 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.674      ;
+; 0.522 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.674      ;
+; 0.522 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regB|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.674      ;
+; 0.594 ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.746      ;
+; 0.594 ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.746      ;
+; 0.594 ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.746      ;
+; 0.594 ; bc:BCportMap|state.S3                ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.746      ;
+; 0.612 ; bo:BOportMap|registrador:regA|q[3]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.764      ;
+; 0.615 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.767      ;
+; 0.616 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.768      ;
+; 0.616 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.768      ;
+; 0.617 ; bc:BCportMap|state.S1                ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.769      ;
+; 0.619 ; bo:BOportMap|registrador:regA|q[3]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.771      ;
+; 0.622 ; bo:BOportMap|registrador:regB|q[0]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.774      ;
+; 0.625 ; bo:BOportMap|registrador:regB|q[0]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.777      ;
+; 0.633 ; bo:BOportMap|registrador:regB|q[3]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.785      ;
+; 0.636 ; bo:BOportMap|registrador:regB|q[3]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.788      ;
+; 0.663 ; bo:BOportMap|registrador:regB|q[3]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.815      ;
+; 0.671 ; bo:BOportMap|registrador:regA|q[2]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.823      ;
+; 0.673 ; bc:BCportMap|state.S1                ; bc:BCportMap|state.S2                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.825      ;
+; 0.678 ; bo:BOportMap|registrador:regA|q[2]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.830      ;
+; 0.734 ; bo:BOportMap|registrador:regA|q[0]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.886      ;
+; 0.741 ; bo:BOportMap|registrador:regA|q[0]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.893      ;
+; 0.751 ; bo:BOportMap|registrador:regA|q[1]   ; bc:BCportMap|state.S5                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.903      ;
+; 0.758 ; bo:BOportMap|registrador:regA|q[1]   ; bc:BCportMap|state.S3                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.910      ;
+; 0.765 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.917      ;
+; 0.768 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.920      ;
+; 0.769 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.921      ;
+; 0.772 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.924      ;
+; 0.799 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.951      ;
+; 0.801 ; bc:BCportMap|state.S4                ; bc:BCportMap|state.S2                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.953      ;
+; 0.815 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.967      ;
+; 0.818 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.970      ;
+; 0.818 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.970      ;
+; 0.825 ; bo:BOportMap|registrador:regB|q[3]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.977      ;
+; 0.836 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.988      ;
+; 0.856 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.008      ;
+; 0.857 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.009      ;
+; 0.858 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.010      ;
+; 0.861 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.013      ;
+; 0.870 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.022      ;
+; 0.872 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.024      ;
+; 0.877 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.029      ;
+; 0.884 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.036      ;
+; 0.888 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.040      ;
+; 0.895 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.047      ;
+; 0.903 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.055      ;
+; 0.908 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.060      ;
+; 0.913 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.065      ;
+; 0.917 ; bo:BOportMap|registrador:regA|q[3]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.069      ;
+; 0.920 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.926 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.078      ;
+; 0.939 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.091      ;
+; 0.941 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.093      ;
+; 0.955 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.107      ;
+; 0.957 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.109      ;
+; 0.959 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.111      ;
+; 0.959 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.111      ;
+; 0.961 ; bc:BCportMap|state.S4                ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.113      ;
+; 0.962 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.114      ;
+; 0.963 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.115      ;
+; 0.966 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.118      ;
+; 0.969 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.121      ;
+; 0.975 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.127      ;
+; 0.995 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.147      ;
+; 0.997 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.149      ;
+; 0.999 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.151      ;
+; 1.001 ; bo:BOportMap|registrador_r:regP|q[3] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.153      ;
+; 1.028 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.180      ;
+; 1.032 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.184      ;
+; 1.035 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.187      ;
+; 1.046 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.198      ;
+; 1.047 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.199      ;
+; 1.050 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.202      ;
+; 1.050 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.202      ;
+; 1.053 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.205      ;
+; 1.065 ; bo:BOportMap|registrador:regA|q[2]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.217      ;
+; 1.079 ; bo:BOportMap|registrador:regA|q[3]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.231      ;
+; 1.084 ; bo:BOportMap|registrador:regA|q[0]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.236      ;
+; 1.088 ; bo:BOportMap|registrador:regA|q[1]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.240      ;
+; 1.091 ; bo:BOportMap|registrador_r:regP|q[0] ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.243      ;
+; 1.101 ; bo:BOportMap|registrador_r:regP|q[1] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.253      ;
+; 1.103 ; bo:BOportMap|registrador:regB|q[1]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.255      ;
+; 1.116 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.268      ;
+; 1.117 ; bo:BOportMap|registrador_r:regP|q[2] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.269      ;
+; 1.134 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador:regA|q[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.286      ;
+; 1.137 ; bo:BOportMap|registrador:regB|q[2]   ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.289      ;
+; 1.163 ; bo:BOportMap|registrador_r:regP|q[3] ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.315      ;
+; 1.172 ; bo:BOportMap|registrador:regB|q[0]   ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.324      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'clk'                                                                                                                 ;
++-------+-----------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node             ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.208 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.824      ;
+; 0.208 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.824      ;
+; 0.208 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.824      ;
+; 0.208 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.824      ;
++-------+-----------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'clk'                                                                                                                  ;
++-------+-----------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node             ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.672 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.824      ;
+; 0.672 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.824      ;
+; 0.672 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.824      ;
+; 0.672 ; bc:BCportMap|state.S1 ; bo:BOportMap|registrador_r:regP|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.824      ;
++-------+-----------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bc:BCportMap|state.S0                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bc:BCportMap|state.S0                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bc:BCportMap|state.S1                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bc:BCportMap|state.S1                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bc:BCportMap|state.S2                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bc:BCportMap|state.S2                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bc:BCportMap|state.S3                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bc:BCportMap|state.S3                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bc:BCportMap|state.S4                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bc:BCportMap|state.S4                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bc:BCportMap|state.S5                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bc:BCportMap|state.S5                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regA|q[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador:regB|q[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; bo:BOportMap|registrador_r:regP|q[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BCportMap|state.S0|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BCportMap|state.S0|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BCportMap|state.S1|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BCportMap|state.S1|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BCportMap|state.S2|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BCportMap|state.S2|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BCportMap|state.S3|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BCportMap|state.S3|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BCportMap|state.S4|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BCportMap|state.S4|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BCportMap|state.S5|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BCportMap|state.S5|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regA|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regA|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regA|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regA|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regA|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regA|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regA|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regA|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regB|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regB|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regB|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regB|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regB|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regB|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regB|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regB|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regP|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regP|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regP|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regP|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regP|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regP|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BOportMap|regP|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BOportMap|regP|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                   ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; entA[*]   ; clk        ; 1.966 ; 1.966 ; Rise       ; clk             ;
+;  entA[0]  ; clk        ; 1.921 ; 1.921 ; Rise       ; clk             ;
+;  entA[1]  ; clk        ; 1.966 ; 1.966 ; Rise       ; clk             ;
+;  entA[2]  ; clk        ; 0.103 ; 0.103 ; Rise       ; clk             ;
+;  entA[3]  ; clk        ; 0.042 ; 0.042 ; Rise       ; clk             ;
+; entB[*]   ; clk        ; 1.864 ; 1.864 ; Rise       ; clk             ;
+;  entB[0]  ; clk        ; 1.778 ; 1.778 ; Rise       ; clk             ;
+;  entB[1]  ; clk        ; 1.772 ; 1.772 ; Rise       ; clk             ;
+;  entB[2]  ; clk        ; 1.864 ; 1.864 ; Rise       ; clk             ;
+;  entB[3]  ; clk        ; 1.860 ; 1.860 ; Rise       ; clk             ;
+; inicio    ; clk        ; 1.807 ; 1.807 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; entA[*]   ; clk        ; 0.078  ; 0.078  ; Rise       ; clk             ;
+;  entA[0]  ; clk        ; -1.801 ; -1.801 ; Rise       ; clk             ;
+;  entA[1]  ; clk        ; -1.846 ; -1.846 ; Rise       ; clk             ;
+;  entA[2]  ; clk        ; 0.017  ; 0.017  ; Rise       ; clk             ;
+;  entA[3]  ; clk        ; 0.078  ; 0.078  ; Rise       ; clk             ;
+; entB[*]   ; clk        ; -1.652 ; -1.652 ; Rise       ; clk             ;
+;  entB[0]  ; clk        ; -1.658 ; -1.658 ; Rise       ; clk             ;
+;  entB[1]  ; clk        ; -1.652 ; -1.652 ; Rise       ; clk             ;
+;  entB[2]  ; clk        ; -1.744 ; -1.744 ; Rise       ; clk             ;
+;  entB[3]  ; clk        ; -1.740 ; -1.740 ; Rise       ; clk             ;
+; inicio    ; clk        ; -1.685 ; -1.685 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pronto    ; clk        ; 3.422 ; 3.422 ; Rise       ; clk             ;
+; saida[*]  ; clk        ; 3.573 ; 3.573 ; Rise       ; clk             ;
+;  saida[0] ; clk        ; 3.426 ; 3.426 ; Rise       ; clk             ;
+;  saida[1] ; clk        ; 3.412 ; 3.412 ; Rise       ; clk             ;
+;  saida[2] ; clk        ; 3.524 ; 3.524 ; Rise       ; clk             ;
+;  saida[3] ; clk        ; 3.573 ; 3.573 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pronto    ; clk        ; 3.422 ; 3.422 ; Rise       ; clk             ;
+; saida[*]  ; clk        ; 3.412 ; 3.412 ; Rise       ; clk             ;
+;  saida[0] ; clk        ; 3.426 ; 3.426 ; Rise       ; clk             ;
+;  saida[1] ; clk        ; 3.412 ; 3.412 ; Rise       ; clk             ;
+;  saida[2] ; clk        ; 3.524 ; 3.524 ; Rise       ; clk             ;
+;  saida[3] ; clk        ; 3.573 ; 3.573 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.161  ; 0.215 ; -0.446   ; 0.672   ; -1.380              ;
+;  clk             ; -2.161  ; 0.215 ; -0.446   ; 0.672   ; -1.380              ;
+; Design-wide TNS  ; -17.635 ; 0.0   ; -1.784   ; 0.0     ; -19.38              ;
+;  clk             ; -17.635 ; 0.000 ; -1.784   ; 0.000   ; -19.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; entA[*]   ; clk        ; 3.565 ; 3.565 ; Rise       ; clk             ;
+;  entA[0]  ; clk        ; 3.468 ; 3.468 ; Rise       ; clk             ;
+;  entA[1]  ; clk        ; 3.565 ; 3.565 ; Rise       ; clk             ;
+;  entA[2]  ; clk        ; 0.730 ; 0.730 ; Rise       ; clk             ;
+;  entA[3]  ; clk        ; 0.589 ; 0.589 ; Rise       ; clk             ;
+; entB[*]   ; clk        ; 3.252 ; 3.252 ; Rise       ; clk             ;
+;  entB[0]  ; clk        ; 3.118 ; 3.118 ; Rise       ; clk             ;
+;  entB[1]  ; clk        ; 3.075 ; 3.075 ; Rise       ; clk             ;
+;  entB[2]  ; clk        ; 3.225 ; 3.225 ; Rise       ; clk             ;
+;  entB[3]  ; clk        ; 3.252 ; 3.252 ; Rise       ; clk             ;
+; inicio    ; clk        ; 3.157 ; 3.157 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; entA[*]   ; clk        ; 0.078  ; 0.078  ; Rise       ; clk             ;
+;  entA[0]  ; clk        ; -1.801 ; -1.801 ; Rise       ; clk             ;
+;  entA[1]  ; clk        ; -1.846 ; -1.846 ; Rise       ; clk             ;
+;  entA[2]  ; clk        ; 0.017  ; 0.017  ; Rise       ; clk             ;
+;  entA[3]  ; clk        ; 0.078  ; 0.078  ; Rise       ; clk             ;
+; entB[*]   ; clk        ; -1.652 ; -1.652 ; Rise       ; clk             ;
+;  entB[0]  ; clk        ; -1.658 ; -1.658 ; Rise       ; clk             ;
+;  entB[1]  ; clk        ; -1.652 ; -1.652 ; Rise       ; clk             ;
+;  entB[2]  ; clk        ; -1.744 ; -1.744 ; Rise       ; clk             ;
+;  entB[3]  ; clk        ; -1.740 ; -1.740 ; Rise       ; clk             ;
+; inicio    ; clk        ; -1.685 ; -1.685 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pronto    ; clk        ; 6.054 ; 6.054 ; Rise       ; clk             ;
+; saida[*]  ; clk        ; 6.364 ; 6.364 ; Rise       ; clk             ;
+;  saida[0] ; clk        ; 6.062 ; 6.062 ; Rise       ; clk             ;
+;  saida[1] ; clk        ; 6.190 ; 6.190 ; Rise       ; clk             ;
+;  saida[2] ; clk        ; 6.289 ; 6.289 ; Rise       ; clk             ;
+;  saida[3] ; clk        ; 6.364 ; 6.364 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pronto    ; clk        ; 3.422 ; 3.422 ; Rise       ; clk             ;
+; saida[*]  ; clk        ; 3.412 ; 3.412 ; Rise       ; clk             ;
+;  saida[0] ; clk        ; 3.426 ; 3.426 ; Rise       ; clk             ;
+;  saida[1] ; clk        ; 3.412 ; 3.412 ; Rise       ; clk             ;
+;  saida[2] ; clk        ; 3.524 ; 3.524 ; Rise       ; clk             ;
+;  saida[3] ; clk        ; 3.573 ; 3.573 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 152      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 152      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 4        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 4        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 16    ; 16   ;
+; Unconstrained Output Ports      ; 5     ; 5    ;
+; Unconstrained Output Port Paths ; 5     ; 5    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 10 18:47:45 2020
+Info: Command: quartus_sta multiplicador -c multiplicador
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'multiplicador.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.161
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.161       -17.635 clk 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clk 
+Info (332146): Worst-case recovery slack is -0.446
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.446        -1.784 clk 
+Info (332146): Worst-case removal slack is 1.216
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.216         0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -19.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.398
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.398        -1.760 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332146): Worst-case recovery slack is 0.208
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.208         0.000 clk 
+Info (332146): Worst-case removal slack is 0.672
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.672         0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -19.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4531 megabytes
+    Info: Processing ended: Tue Nov 10 18:47:46 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

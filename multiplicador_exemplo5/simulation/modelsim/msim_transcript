@@ -201,12 +201,7 @@ vsim +altera -do multiplicador_run_msim_rtl_vhdl.do -l msim_transcript -gui work
 # -- Compiling architecture estrutura of igualum
 # 
 add wave *
-add wave -position end  sim:/multiplicador_tb/M1/BCconnection/state
-add wave -position end  sim:/multiplicador_tb/M1/BOconnection/saidaRegA
-add wave -position end  sim:/multiplicador_tb/M1/BOconnection/saidaMuxP
-add wave -position end  sim:/multiplicador_tb/M1/BOconnection/saidaRegP
-add wave -position end  sim:/multiplicador_tb/M1/BOconnection/saidaSomador
-run 600ns
+run 400ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /multiplicador_tb/M1/BOconnection/subtratorA1
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).

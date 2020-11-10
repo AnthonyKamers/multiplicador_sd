@@ -28,8 +28,8 @@ begin
 	 -- Reset <= '1', '0' after 20 ns;
 	 Reset <= '0', '1' after 20 ns, '0' after 40 ns;
 	 inicio <= '0', '1' after 40 ns, '0' after 60 ns;
-	 entA <= "0010"; -- 2
-	 entB <= "0011"; -- 3
+	 entA <= "0011"; -- 3
+	 entB <= "0100"; -- 4
 	 
 	 -- processo gerador de clock
 	 tb1 : process

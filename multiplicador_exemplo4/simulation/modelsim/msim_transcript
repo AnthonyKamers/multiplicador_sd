@@ -181,6 +181,7 @@ vsim +altera -do multiplicador_run_msim_rtl_vhdl.do -l msim_transcript -gui work
 # -- Compiling entity igualazero
 # -- Compiling architecture estrutura of igualazero
 # 
+add wave *
 run 400ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /multiplicador_tb/M1/BOportMap/geraBz
@@ -198,6 +199,3 @@ run 400ns
 #    Time: 0 ps  Iteration: 2  Instance: /multiplicador_tb/M1/BOportMap/somasub
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 20 ns  Iteration: 5  Instance: /multiplicador_tb/M1/BOportMap/somasub
-add wave *
-run 400ns
-# WARNING: No extended dataflow license exists
