@@ -6,7 +6,7 @@ ENTITY bo IS
 PORT (clk : IN STD_LOGIC;
       CA, CP, CB, CMULT, MP, MA: IN STD_LOGIC;
       entA, entB : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-      Az, Bz : OUT STD_LOGIC;
+      Az, Bz, A1 : OUT STD_LOGIC;
 		regMult: OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 		);
 END bo;
@@ -31,7 +31,12 @@ ARCHITECTURE estrutura OF bo IS
 	
    COMPONENT igualzero IS
 	PORT (a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	igual : OUT STD_LOGIC);
+			igual : OUT STD_LOGIC);
+	END COMPONENT;
+	
+	COMPONENT igualum IS
+	PORT (a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			igual : OUT STD_LOGIC);
 	END COMPONENT;
 	
 	COMPONENT registrador IS
@@ -62,6 +67,7 @@ BEGIN
 	muxA: mux2para1 PORT MAP (saidaSubtrator, entA, MA, saidaMuxA);
 	regA: registrador PORT MAP (clk, CA, saidaMuxA, saidaRegA);
 	geraAz: igualzero PORT MAP (saidaRegA, Az);
+	geraA1: igualum PORT MAP (saidaRegA, A1);
 	subtratorA1: subtrator PORT MAP (saidaRegA, valor1, saidaSubtrator);
 	
 	

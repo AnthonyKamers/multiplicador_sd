@@ -1,5 +1,5 @@
 Analysis & Synthesis report for multiplicador
-Tue Nov 10 18:01:05 2020
+Tue Nov 10 18:36:32 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,10 +16,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. State Machine - |multiplicador|bc:BCconnection|state
   9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Port Connectivity Checks: "bo:BOconnection|subtrator:subtratorA1"
- 12. Port Connectivity Checks: "bo:BOconnection|mux2para1:muxP"
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "bo:BOconnection|subtrator:subtratorA1"
+ 13. Port Connectivity Checks: "bo:BOconnection|mux2para1:muxP"
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -45,15 +46,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 10 18:01:05 2020           ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 10 18:36:32 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; multiplicador                                   ;
 ; Top-level Entity Name              ; multiplicador                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 28                                              ;
-;     Total combinational functions  ; 18                                              ;
-;     Dedicated logic registers      ; 25                                              ;
-; Total registers                    ; 25                                              ;
+; Total logic elements               ; 30                                              ;
+;     Total combinational functions  ; 20                                              ;
+;     Dedicated logic registers      ; 26                                              ;
+; Total registers                    ; 26                                              ;
 ; Total pins                         ; 16                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -171,6 +172,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; multiplicador.vhd                ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/multiplicador.vhd  ;         ;
 ; BO/somador.vhd                   ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somador.vhd     ;         ;
 ; BO/subtrator.vhd                 ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/subtrator.vhd   ;         ;
+; BO/igualum.vhd                   ; yes             ; User VHDL File  ; C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/igualum.vhd     ;         ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -179,28 +181,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 28    ;
+; Estimated Total logic elements              ; 30    ;
 ;                                             ;       ;
-; Total combinational functions               ; 18    ;
+; Total combinational functions               ; 20    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 6     ;
-;     -- 3 input functions                    ; 9     ;
+;     -- 4 input functions                    ; 7     ;
+;     -- 3 input functions                    ; 10    ;
 ;     -- <=2 input functions                  ; 3     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 15    ;
+;     -- normal mode                          ; 17    ;
 ;     -- arithmetic mode                      ; 3     ;
 ;                                             ;       ;
-; Total registers                             ; 25    ;
-;     -- Dedicated logic registers            ; 25    ;
+; Total registers                             ; 26    ;
+;     -- Dedicated logic registers            ; 26    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 16    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 25    ;
-; Total fan-out                               ; 141   ;
-; Average fan-out                             ; 2.39  ;
+; Maximum fan-out                             ; 26    ;
+; Total fan-out                               ; 151   ;
+; Average fan-out                             ; 2.44  ;
 +---------------------------------------------+-------+
 
 
@@ -209,9 +211,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
-; |multiplicador                     ; 18 (0)            ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |multiplicador                                            ; work         ;
-;    |bc:BCconnection|               ; 7 (7)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bc:BCconnection                            ; work         ;
-;    |bo:BOconnection|               ; 11 (0)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection                            ; work         ;
+; |multiplicador                     ; 20 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |multiplicador                                            ; work         ;
+;    |bc:BCconnection|               ; 8 (8)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bc:BCconnection                            ; work         ;
+;    |bo:BOconnection|               ; 12 (0)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection                            ; work         ;
 ;       |igualzero:geraAz|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|igualzero:geraAz           ; work         ;
 ;       |igualzero:geraBz|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|igualzero:geraBz           ; work         ;
 ;       |mux2para1:muxA|             ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|mux2para1:muxA             ; work         ;
@@ -219,6 +221,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |registrador:regB|           ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|registrador:regB           ; work         ;
 ;       |registrador:regMultPortMap| ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|registrador:regMultPortMap ; work         ;
 ;       |registrador:regP|           ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|registrador:regP           ; work         ;
+;       |subtrator:subtratorA1|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplicador|bo:BOconnection|subtrator:subtratorA1      ; work         ;
 +------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -242,10 +245,9 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------------------+
 ; Register name                         ; Reason for Removal             ;
 +---------------------------------------+--------------------------------+
-; bc:BCconnection|CP                    ; Merged with bc:BCconnection|CA ;
 ; bc:BCconnection|MP                    ; Merged with bc:BCconnection|MA ;
 ; bc:BCconnection|state.S2              ; Merged with bc:BCconnection|CA ;
-; Total Number of Removed Registers = 3 ;                                ;
+; Total Number of Removed Registers = 2 ;                                ;
 +---------------------------------------+--------------------------------+
 
 
@@ -254,14 +256,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 25    ;
+; Total registers                              ; 26    ;
 ; Number of registers using Synchronous Clear  ; 4     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 9     ;
+; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |multiplicador|bc:BCconnection|state ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |multiplicador|bc:BCconnection|state ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
 
 
 +-------------------------------------------------------------------+
@@ -298,7 +310,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 10 18:01:04 2020
+    Info: Processing started: Tue Nov 10 18:36:30 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off multiplicador -c multiplicador
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file bo/igualzero.vhd
@@ -334,6 +346,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file bo/soma
 Info (12021): Found 2 design units, including 1 entities, in source file bo/subtrator.vhd
     Info (12022): Found design unit 1: subtrator-estrutura
     Info (12023): Found entity 1: subtrator
+Info (12021): Found 2 design units, including 1 entities, in source file bo/igualum.vhd
+    Info (12022): Found design unit 1: igualum-estrutura
+    Info (12023): Found entity 1: igualum
 Info (12127): Elaborating entity "multiplicador" for the top level hierarchy
 Info (12128): Elaborating entity "bc" for hierarchy "bc:BCconnection"
 Info (12128): Elaborating entity "bo" for hierarchy "bo:BOconnection"
@@ -341,17 +356,18 @@ Info (12128): Elaborating entity "mux2para1" for hierarchy "bo:BOconnection|mux2
 Info (12128): Elaborating entity "registrador" for hierarchy "bo:BOconnection|registrador:regP"
 Info (12128): Elaborating entity "igualzero" for hierarchy "bo:BOconnection|igualzero:geraBz"
 Info (12128): Elaborating entity "somador" for hierarchy "bo:BOconnection|somador:somadorPB"
+Info (12128): Elaborating entity "igualum" for hierarchy "bo:BOconnection|igualum:geraA1"
 Info (12128): Elaborating entity "subtrator" for hierarchy "bo:BOconnection|subtrator:subtratorA1"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 46 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 28 logic cells
+    Info (21061): Implemented 30 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4634 megabytes
-    Info: Processing ended: Tue Nov 10 18:01:05 2020
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Tue Nov 10 18:36:32 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

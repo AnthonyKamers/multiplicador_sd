@@ -26,7 +26,7 @@ Reset => CB~reg0.ACLR
 Reset => CP~reg0.ACLR
 Reset => CA~reg0.ACLR
 Reset => pronto~reg0.ACLR
-Reset => state~3.DATAIN
+Reset => state~8.DATAIN
 clk => MA~reg0.CLK
 clk => MP~reg0.CLK
 clk => CMULT~reg0.CLK
@@ -34,11 +34,15 @@ clk => CB~reg0.CLK
 clk => CP~reg0.CLK
 clk => CA~reg0.CLK
 clk => pronto~reg0.CLK
-clk => state~1.DATAIN
-inicio => state.DATAB
+clk => state~6.DATAIN
+inicio => Selector1.IN3
 inicio => Selector0.IN2
 aZ => process_0.IN0
+aZ => process_0.IN0
 bZ => process_0.IN1
+bZ => process_0.IN1
+A1 => process_0.IN1
+A1 => Selector4.IN2
 pronto <= pronto~reg0.DB_MAX_OUTPUT_PORT_TYPE
 CA <= CA~reg0.DB_MAX_OUTPUT_PORT_TYPE
 CP <= CP~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -69,6 +73,7 @@ entB[2] => registrador:regB.d[2]
 entB[3] => registrador:regB.d[3]
 Az <= igualzero:geraAz.igual
 Bz <= igualzero:geraBz.igual
+A1 <= igualum:geraA1.igual
 regMult[0] <= registrador:regMultPortMap.q[0]
 regMult[1] <= registrador:regMultPortMap.q[1]
 regMult[2] <= registrador:regMultPortMap.q[2]
@@ -213,6 +218,14 @@ q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |multiplicador|bo:BOconnection|igualzero:geraAz
+a[0] => Equal0.IN7
+a[1] => Equal0.IN6
+a[2] => Equal0.IN5
+a[3] => Equal0.IN4
+igual <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplicador|bo:BOconnection|igualum:geraA1
 a[0] => Equal0.IN7
 a[1] => Equal0.IN6
 a[2] => Equal0.IN5

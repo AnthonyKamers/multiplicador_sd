@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 
 ENTITY bc IS
 PORT (Reset, clk, inicio : IN STD_LOGIC;
-      aZ, bZ: IN STD_LOGIC;
+      aZ, bZ, A1: IN STD_LOGIC;
       pronto : OUT STD_LOGIC;
       CA, CP, CB, CMULT, MP, MA: OUT STD_LOGIC );
 END bc;
@@ -58,7 +58,7 @@ BEGIN
 				WHEN S2 =>
 					IF (aZ = '0' and bZ = '0') THEN
 						state <= S3;
-					ELSE
+					ELSIF ((aZ = '1' or bZ = '1') or A1 = '1') THEN
 						state <= S4;
 					END IF;
 				
@@ -71,8 +71,14 @@ BEGIN
 					--MA <= '0';
 					
 				WHEN S3 =>
+					IF (A1 = '1') THEN
+						CP <= '0';
+					ELSE
+						CP <= '1';
+					END IF;
+				
 					CA <= '1';
-					CP <= '1';
+					-- CP <= '1';
 					CB <= '0';
 					CMULT <= '0';
 					MP <= '0';

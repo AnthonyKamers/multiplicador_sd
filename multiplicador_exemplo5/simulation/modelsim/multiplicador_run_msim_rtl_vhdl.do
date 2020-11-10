@@ -13,4 +13,5 @@ vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Traba
 vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/multiplicador.vhd}
 vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/somador.vhd}
 vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/subtrator.vhd}
+vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/igualum.vhd}
 

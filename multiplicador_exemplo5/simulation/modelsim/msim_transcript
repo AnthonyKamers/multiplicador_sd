@@ -78,6 +78,15 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity subtrator
 # -- Compiling architecture estrutura of subtrator
+# vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/igualum.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity igualum
+# -- Compiling architecture estrutura of igualum
 # 
 vcom -reportprogress 300 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/multiplicador_tb.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -103,6 +112,7 @@ vsim +altera -do multiplicador_run_msim_rtl_vhdl.do -l msim_transcript -gui work
 # Loading work.registrador(estrutura)
 # Loading work.igualzero(estrutura)
 # Loading work.somador(estrutura)
+# Loading work.igualum(estrutura)
 # Loading work.subtrator(estrutura)
 # do multiplicador_run_msim_rtl_vhdl.do 
 # if {[file exists rtl_work]} {
@@ -180,12 +190,18 @@ vsim +altera -do multiplicador_run_msim_rtl_vhdl.do -l msim_transcript -gui work
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity subtrator
 # -- Compiling architecture estrutura of subtrator
+# vcom -93 -work work {C:/Users/antho/Desktop/Anthony/UFSC/2020.1/SD/Prática/Trabalho Final/multiplicador_exemplo5/BO/igualum.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity igualum
+# -- Compiling architecture estrutura of igualum
 # 
 add wave *
 add wave -position end  sim:/multiplicador_tb/M1/BCconnection/state
-add wave -position end  sim:/multiplicador_tb/M1/BOconnection/CMULT
-add wave -position end  sim:/multiplicador_tb/M1/BOconnection/CP
-add wave -position end  sim:/multiplicador_tb/M1/BOconnection/MP
 add wave -position end  sim:/multiplicador_tb/M1/BOconnection/saidaRegA
 add wave -position end  sim:/multiplicador_tb/M1/BOconnection/saidaMuxP
 add wave -position end  sim:/multiplicador_tb/M1/BOconnection/saidaRegP
@@ -196,6 +212,10 @@ run 600ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /multiplicador_tb/M1/BOconnection/subtratorA1
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /multiplicador_tb/M1/BOconnection/geraA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /multiplicador_tb/M1/BOconnection/geraA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /multiplicador_tb/M1/BOconnection/geraAz
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /multiplicador_tb/M1/BOconnection/geraAz
@@ -207,6 +227,8 @@ run 600ns
 #    Time: 0 ps  Iteration: 0  Instance: /multiplicador_tb/M1/BOconnection/geraBz
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /multiplicador_tb/M1/BOconnection/geraBz
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /multiplicador_tb/M1/BOconnection/geraA1
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 1  Instance: /multiplicador_tb/M1/BOconnection/geraAz
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
