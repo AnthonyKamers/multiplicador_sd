@@ -199,3 +199,4 @@ run 400ns
 #    Time: 0 ps  Iteration: 2  Instance: /multiplicador_tb/M1/BOportMap/somasub
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 20 ns  Iteration: 5  Instance: /multiplicador_tb/M1/BOportMap/somasub
+run 400ns
